@@ -1,0 +1,80 @@
+object fMain: TfMain
+  Left = 777
+  Height = 644
+  Top = 143
+  Width = 985
+  Align = alCustom
+  Caption = 'ohPatrão'
+  ClientHeight = 624
+  ClientWidth = 985
+  Menu = MainMenu1
+  LCLVersion = '2.2.4.0'
+  WindowState = wsFullScreen
+  object Label1: TLabel
+    Left = 0
+    Height = 81
+    Top = 43
+    Width = 985
+    Align = alBottom
+    Alignment = taCenter
+    BorderSpacing.Bottom = 500
+    Caption = 'Oh Patrão!'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -64
+    Font.Name = 'Franklin Gothic Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object MainMenu1: TMainMenu
+    Left = 32
+    Top = 24
+    object mnCadastro: TMenuItem
+      Caption = 'Cadastro'
+      object mnCadCategoriaProd: TMenuItem
+        Caption = 'Categoria de produto'
+        OnClick = mnCadCategoriaProdClick
+      end
+      object mnProdutos: TMenuItem
+        Caption = 'Produtos'
+        OnClick = mnProdutosClick
+      end
+      object mnClientes: TMenuItem
+        Caption = 'Clientes'
+        OnClick = mnClientesClick
+      end
+    end
+    object mnSaidas: TMenuItem
+      Caption = 'Saídas'
+      object mnOrcamento: TMenuItem
+        Caption = 'Orçamento'
+        OnClick = mnOrcamentoClick
+      end
+    end
+    object mnRelatorios: TMenuItem
+      Caption = 'Relatórios'
+      object mnRelClientes: TMenuItem
+        Caption = 'Relatório de Clientes'
+        OnClick = mnRelClientesClick
+      end
+      object mnRelProdutos: TMenuItem
+        Caption = 'Relatório de produtos'
+        OnClick = mnRelProdutosClick
+      end
+      object mnRelOrcamentos: TMenuItem
+        Caption = 'Relatório de Orçamentos'
+        OnClick = mnRelOrcamentosClick
+      end
+    end
+    object Sobre: TMenuItem
+      Caption = 'Sobre'
+      OnClick = SobreClick
+    end
+    object Sair: TMenuItem
+      Caption = 'Sair'
+      OnClick = SairClick
+    end
+  end
+end

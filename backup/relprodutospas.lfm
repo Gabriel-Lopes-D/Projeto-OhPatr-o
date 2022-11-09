@@ -1,0 +1,38 @@
+object RelProdutosF: TRelProdutosF
+  Left = 565
+  Height = 192
+  Top = 212
+  Width = 328
+  Caption = 'RelProdutosF'
+  ClientHeight = 192
+  ClientWidth = 328
+  LCLVersion = '2.2.2.0'
+  object Button1: TButton
+    Left = 24
+    Height = 57
+    Top = 58
+    Width = 267
+    Caption = 'Imprimir relação de produtos'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -20
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object frReportProdutos: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    Left = 40
+    Top = 136
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = DataModule1.qryProduto
+    Left = 192
+    Top = 141
+  end
+end

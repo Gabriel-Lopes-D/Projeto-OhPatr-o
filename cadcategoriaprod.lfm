@@ -1,0 +1,190 @@
+inherited cadcategoriaProdF: TcadcategoriaProdF
+  Left = 639
+  Height = 644
+  Top = 164
+  Width = 1321
+  Align = alClient
+  Caption = 'Cadastro Categoria'
+  ClientHeight = 644
+  ClientWidth = 1321
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -12
+  Font.Name = 'Arial'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  OnCreate = FormCreate
+  OnShow = FormShow
+  WindowState = wsNormal
+  inherited pcMainCad: TPageControl
+    Height = 644
+    Width = 1321
+    inherited tsPesquisa: TTabSheet
+      ClientHeight = 616
+      ClientWidth = 1313
+      inherited Panel1: TPanel
+        Width = 1313
+        ClientWidth = 1313
+        inherited edtCampoPesquisa: TEdit
+          Left = 120
+          Top = 24
+          OnKeyDown = edtCampoPesquisaKeyDown
+        end
+        inherited btnPesquisa: TBitBtn
+          Left = 392
+          OnClick = btnPesquisaClick
+        end
+        inherited btnNovo: TBitBtn
+          Left = 1185
+          Height = 44
+          Top = 11
+          Width = 117
+          Align = alRight
+          BorderSpacing.Left = 1
+          BorderSpacing.Top = 10
+          BorderSpacing.Right = 10
+          BorderSpacing.Bottom = 10
+          OnClick = btnNovoClick
+        end
+        object ComboBox1: TComboBox[3]
+          Left = 8
+          Height = 23
+          Top = 24
+          Width = 100
+          ItemHeight = 15
+          ItemIndex = 0
+          Items.Strings = (
+            'Id'
+            'Categoria'
+          )
+          TabOrder = 3
+          Text = 'Id'
+        end
+      end
+      object DBGrid1: TDBGrid[1]
+        Left = 0
+        Height = 511
+        Top = 66
+        Width = 1313
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            MaxSize = 100
+            Title.Alignment = taRightJustify
+            Title.Caption = 'Id'
+            Width = 50
+            FieldName = 'categoriaprodutoid'
+            DisplayFormat = '0'
+          end        
+          item
+            Title.Caption = 'Categoria'
+            FieldName = 'ds_categoria_produto'
+          end>
+        DataSource = dsCategoria
+        TabOrder = 1
+        OnDblClick = DBGrid1DblClick
+      end
+      object Panel3: TPanel[2]
+        Left = 0
+        Height = 39
+        Top = 577
+        Width = 1313
+        Align = alBottom
+        Alignment = taRightJustify
+        Caption = 'Oh Patrão! '
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -27
+        Font.Name = 'Franklin Gothic Medium'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsItalic]
+        ParentFont = False
+        TabOrder = 2
+      end
+    end
+    inherited tsCadastro: TTabSheet
+      ClientHeight = 616
+      ClientWidth = 1313
+      inherited Panel2: TPanel
+        Width = 1313
+        ClientWidth = 1313
+        inherited btnGravar: TBitBtn
+          OnClick = btnGravarClick
+        end
+        inherited btnExcluir: TBitBtn
+          OnClick = btnExcluirClick
+        end
+        inherited btnCancelar: TBitBtn
+          OnClick = btnCancelarClick
+        end
+      end
+      object Label1: TLabel[1]
+        Left = 32
+        Height = 15
+        Top = 104
+        Width = 189
+        Caption = 'Descrição da categoria do produto'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label2: TLabel[2]
+        Left = 376
+        Height = 15
+        Top = 111
+        Width = 40
+        Caption = 'Código'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit[3]
+        Left = 32
+        Height = 23
+        Top = 128
+        Width = 182
+        DataField = 'ds_categoria_produto'
+        DataSource = dsCategoria
+        MaxLength = 50
+        TabOrder = 1
+        OnExit = DBEdit1Exit
+      end
+      object DBEdit2: TDBEdit[4]
+        Left = 367
+        Height = 23
+        Top = 128
+        Width = 48
+        DataField = 'categoriaprodutoid'
+        DataSource = dsCategoria
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object Panel4: TPanel[5]
+        Left = 0
+        Height = 50
+        Top = 566
+        Width = 1313
+        Align = alBottom
+        Alignment = taRightJustify
+        Caption = 'Oh Patrão! '
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -27
+        Font.Name = 'Franklin Gothic Medium'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsItalic]
+        ParentFont = False
+        TabOrder = 3
+      end
+    end
+  end
+  object dsCategoria: TDataSource[1]
+    DataSet = DataModule1.qryCategoria
+    Left = 480
+    Top = 40
+  end
+end

@@ -1,0 +1,116 @@
+inherited cadcategoriaProdF: TcadcategoriaProdF
+  Left = 257
+  Height = 483
+  Top = 96
+  Width = 1093
+  Align = alClient
+  Caption = 'Cadastro Categoria'
+  ClientHeight = 483
+  ClientWidth = 1093
+  OnShow = FormShow
+  inherited pcMainCad: TPageControl
+    Height = 483
+    Width = 1093
+    inherited tsPesquisa: TTabSheet
+      ClientHeight = 455
+      ClientWidth = 1085
+      inherited Panel1: TPanel
+        Width = 1085
+        ClientWidth = 1085
+        inherited edtCampoPesquisa: TEdit
+          Top = 24
+        end
+        inherited btnPesquisa: TBitBtn
+          OnClick = btnPesquisaClick
+        end
+        inherited btnNovo: TBitBtn
+          OnClick = btnNovoClick
+        end
+      end
+      object DBGrid1: TDBGrid[1]
+        Left = 0
+        Height = 389
+        Top = 66
+        Width = 1085
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Layout = tlCenter
+            MaxSize = 100
+            Title.Alignment = taRightJustify
+            Title.Caption = 'Id'
+            Width = 50
+            FieldName = 'categoriaprodutoid'
+            DisplayFormat = '0'
+          end        
+          item
+            Title.Caption = 'Categoria'
+            FieldName = 'ds_categoria_produto'
+          end>
+        DataSource = dsCategoria
+        TabOrder = 1
+        OnDblClick = DBGrid1DblClick
+      end
+    end
+    inherited tsCadastro: TTabSheet
+      ClientHeight = 455
+      ClientWidth = 1085
+      inherited Panel2: TPanel
+        Width = 1085
+        ClientWidth = 1085
+        inherited btnGravar: TBitBtn
+          OnClick = btnGravarClick
+        end
+        inherited btnExcluir: TBitBtn
+          OnClick = btnExcluirClick
+        end
+        inherited btnCancelar: TBitBtn
+          OnClick = btnCancelarClick
+        end
+      end
+      object Label1: TLabel[1]
+        Left = 32
+        Height = 15
+        Top = 104
+        Width = 182
+        Caption = 'Descrição da categoria do produto'
+        ParentColor = False
+      end
+      object Label2: TLabel[2]
+        Left = 376
+        Height = 15
+        Top = 111
+        Width = 39
+        Caption = 'Código'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit[3]
+        Left = 32
+        Height = 23
+        Top = 128
+        Width = 182
+        DataField = 'ds_categoria_produto'
+        DataSource = dsCategoria
+        MaxLength = 50
+        TabOrder = 1
+      end
+      object DBEdit2: TDBEdit[4]
+        Left = 367
+        Height = 23
+        Top = 128
+        Width = 48
+        DataField = 'categoriaprodutoid'
+        DataSource = dsCategoria
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 2
+      end
+    end
+  end
+  object dsCategoria: TDataSource[1]
+    DataSet = DataModule1.qryCategoria
+    Left = 960
+    Top = 40
+  end
+end

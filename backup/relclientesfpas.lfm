@@ -1,0 +1,37 @@
+object RelClientesF: TRelClientesF
+  Left = 552
+  Height = 192
+  Top = 199
+  Width = 328
+  Caption = 'Imprimir relação de Clientes'
+  ClientHeight = 192
+  ClientWidth = 328
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -20
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
+  LCLVersion = '2.2.2.0'
+  object Button1: TButton
+    Left = 24
+    Height = 57
+    Top = 58
+    Width = 269
+    Caption = 'Imprimir relação de Clientes'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object frReport1: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    Left = 88
+    Top = 136
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = DataModule1.qryCliente
+    Left = 208
+    Top = 136
+  end
+end
