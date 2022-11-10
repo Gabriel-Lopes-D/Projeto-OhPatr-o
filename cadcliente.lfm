@@ -1,6 +1,6 @@
 inherited cadClienteF: TcadClienteF
-  Left = 776
-  Top = 286
+  Left = 190
+  Top = 140
   Width = 944
   Caption = 'Cliente'
   ClientWidth = 944

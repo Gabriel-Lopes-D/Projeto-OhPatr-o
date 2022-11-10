@@ -25,7 +25,6 @@ type
     procedure BitBtn2Click(Sender: TObject);
     procedure Edit2Exit(Sender: TObject);
     procedure KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
-    procedure Edit2KeyPress(Sender: TObject; var Key: char);
   private
 
   public

@@ -19,10 +19,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Main"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="56"/>
-        <CursorPos X="3" Y="58"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="62"/>
+        <CursorPos X="4" Y="64"/>
         <UsageCount Value="123"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="dtmodulopas.pas"/>
@@ -31,12 +33,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dtModulopas"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="77"/>
-        <CursorPos X="35" Y="88"/>
+        <CursorPos X="27" Y="85"/>
         <UsageCount Value="123"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="cadpadrao.pas"/>
@@ -56,10 +56,12 @@
         <ComponentName Value="cadcategoriaProdF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="124"/>
-        <CursorPos X="69" Y="137"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="37"/>
+        <CursorPos X="3" Y="45"/>
         <UsageCount Value="123"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="cadproduto.pas"/>
@@ -68,10 +70,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadProduto"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="182"/>
-        <CursorPos X="17" Y="197"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="51"/>
+        <CursorPos X="3" Y="59"/>
         <UsageCount Value="119"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="pesqcategoria.pas"/>
@@ -92,10 +96,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadCliente"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="194"/>
-        <CursorPos X="57" Y="235"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="45"/>
+        <CursorPos X="3" Y="53"/>
         <UsageCount Value="108"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="orcamento.pas"/>
@@ -103,10 +109,11 @@
         <ComponentName Value="cadOrcamentoF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="200"/>
-        <CursorPos X="60" Y="217"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="60"/>
+        <CursorPos X="37" Y="68"/>
         <UsageCount Value="105"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="pesqcliente.pas"/>
@@ -173,10 +180,13 @@
         <ComponentName Value="LoginF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="53"/>
         <CursorPos X="3" Y="97"/>
         <UsageCount Value="85"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="sobre.pas"/>
@@ -370,7 +380,24 @@
         <UsageCount Value="23"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory HistoryIndex="3">
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="58" Column="3" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="77" Column="4" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="71" Column="4" TopLine="69"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="64" Column="4" TopLine="62"/>
+      </Position>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes ActiveMode=""/>
