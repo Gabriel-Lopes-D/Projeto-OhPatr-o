@@ -1,12 +1,12 @@
 object pesqClienteF: TpesqClienteF
-  Left = 337
+  Left = 935
   Height = 208
-  Top = 268
+  Top = 277
   Width = 609
   Caption = 'pesqClienteF'
   ClientHeight = 208
   ClientWidth = 609
-  LCLVersion = '2.2.2.0'
+  LCLVersion = '2.2.4.0'
   object Panel1: TPanel
     Left = 0
     Height = 50
@@ -16,16 +16,8 @@ object pesqClienteF: TpesqClienteF
     ClientHeight = 50
     ClientWidth = 609
     TabOrder = 0
-    object DBEdit1: TDBEdit
-      Left = 32
-      Height = 23
-      Top = 16
-      Width = 112
-      MaxLength = 0
-      TabOrder = 0
-    end
     object btnPesquisar: TBitBtn
-      Left = 168
+      Left = 233
       Height = 23
       Top = 16
       Width = 83
@@ -106,7 +98,25 @@ object pesqClienteF: TpesqClienteF
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000
       }
+      OnClick = btnPesquisarClick
+      TabOrder = 0
+    end
+    object Edit1: TEdit
+      Left = 89
+      Height = 23
+      Top = 16
+      Width = 128
+      OnKeyDown = Edit1KeyDown
       TabOrder = 1
+    end
+    object ComboBox1: TComboBox
+      Left = 8
+      Height = 23
+      Top = 16
+      Width = 68
+      ItemHeight = 15
+      TabOrder = 2
+      Text = 'ComboBox1'
     end
   end
   object DBGrid1: TDBGrid
@@ -118,20 +128,21 @@ object pesqClienteF: TpesqClienteF
     Color = clWindow
     Columns = <    
       item
-        Title.Caption = 'clienteid'
+        Title.Caption = 'Id Cliente'
         FieldName = 'clienteid'
       end    
       item
-        Title.Caption = 'nome_cliente'
+        Title.Caption = 'Nome'
         Width = 200
         FieldName = 'nome_cliente'
       end    
       item
-        Title.Caption = 'tipo_cliente'
+        Title.Caption = 'Tipo'
         FieldName = 'tipo_cliente'
       end    
       item
-        Title.Caption = 'cpf_cnpj_cliente'
+        Title.Caption = 'CPF/CNPJ'
+        Width = 100
         FieldName = 'cpf_cnpj_cliente'
       end>
     DataSource = dsPesqCli

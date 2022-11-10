@@ -10,7 +10,7 @@ object RelClientesF: TRelClientesF
   Font.Height = -20
   Font.Pitch = fpVariable
   Font.Quality = fqDraft
-  LCLVersion = '2.2.2.0'
+  LCLVersion = '2.2.4.0'
   object Button1: TButton
     Left = 24
     Height = 57

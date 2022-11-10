@@ -1,33 +1,63 @@
 inherited cadClienteF: TcadClienteF
-  Left = 236
-  Height = 462
-  Top = 101
-  Width = 1114
+  Left = 190
+  Top = 140
+  Width = 944
   Caption = 'Cliente'
-  ClientHeight = 462
-  ClientWidth = 1114
+  ClientWidth = 944
+  OnCreate = FormCreate
   OnShow = FormShow
+  WindowState = wsNormal
   inherited pcMainCad: TPageControl
-    Height = 462
-    Width = 1114
+    Width = 944
+    ActivePage = tsCadastro
+    TabIndex = 1
     inherited tsPesquisa: TTabSheet
-      ClientHeight = 434
-      ClientWidth = 1106
+      ClientWidth = 936
       inherited Panel1: TPanel
-        Width = 1106
-        ClientWidth = 1106
+        Width = 936
+        ClientWidth = 936
+        inherited edtCampoPesquisa: TEdit
+          Left = 152
+          Top = 29
+          OnKeyDown = edtCampoPesquisaKeyDown
+        end
         inherited btnPesquisa: TBitBtn
+          Left = 416
           OnClick = btnPesquisaClick
         end
         inherited btnNovo: TBitBtn
+          Left = 808
+          Height = 44
+          Top = 11
+          Width = 117
+          Align = alRight
+          BorderSpacing.Top = 10
+          BorderSpacing.Right = 10
+          BorderSpacing.Bottom = 10
           OnClick = btnNovoClick
+        end
+        object ComboBox1: TComboBox[3]
+          Left = 32
+          Height = 23
+          Top = 29
+          Width = 100
+          ItemHeight = 15
+          ItemIndex = 0
+          Items.Strings = (
+            'Id'
+            'Tipo'
+            'CPF / CNPJ'
+            'Nome'
+          )
+          TabOrder = 3
+          Text = 'Id'
         end
       end
       object DBGrid1: TDBGrid[1]
         Left = 0
-        Height = 368
+        Height = 258
         Top = 66
-        Width = 1106
+        Width = 936
         Align = alClient
         Color = clWindow
         Columns = <        
@@ -46,6 +76,7 @@ inherited cadClienteF: TcadClienteF
           end        
           item
             Title.Caption = 'CPF / CNPJ'
+            Width = 100
             FieldName = 'cpf_cnpj_cliente'
           end        
           item
@@ -55,14 +86,31 @@ inherited cadClienteF: TcadClienteF
           end>
         DataSource = dsCliente
         TabOrder = 1
+        OnDblClick = DBGrid1DblClick
+      end
+      object Panel3: TPanel[2]
+        Left = 0
+        Height = 50
+        Top = 324
+        Width = 936
+        Align = alBottom
+        Alignment = taRightJustify
+        Caption = 'Oh Patrão! '
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -27
+        Font.Name = 'Franklin Gothic Medium'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsItalic]
+        ParentFont = False
+        TabOrder = 2
       end
     end
     inherited tsCadastro: TTabSheet
-      ClientHeight = 434
-      ClientWidth = 1106
+      ClientWidth = 936
       inherited Panel2: TPanel
-        Width = 1106
-        ClientWidth = 1106
+        Width = 936
+        ClientWidth = 936
         inherited btnGravar: TBitBtn
           OnClick = btnGravarClick
         end
@@ -84,15 +132,15 @@ inherited cadClienteF: TcadClienteF
         TabOrder = 1
       end
       object dbEdtCpfCnpjCli: TDBEdit[2]
-        Left = 40
+        Left = 116
         Height = 23
-        Top = 136
+        Top = 152
         Width = 112
         DataField = 'cpf_cnpj_cliente'
         DataSource = dsCliente
-        MaxLength = 18
-        TabOrder = 2
-        OnExit = dbEdtCpfCnpjCliExit
+        MaxLength = 0
+        TabOrder = 5
+        Visible = False
       end
       object dbEdtIdCli: TDBEdit[3]
         Left = 464
@@ -104,18 +152,18 @@ inherited cadClienteF: TcadClienteF
         ReadOnly = True
         Alignment = taRightJustify
         MaxLength = 0
-        TabOrder = 3
+        TabOrder = 7
       end
       object dbEdtTipoCli: TDBEdit[4]
-        Left = 288
+        Left = 463
         Height = 23
-        Top = 136
+        Top = 152
         Width = 40
         DataField = 'tipo_cliente'
         DataSource = dsCliente
         ReadOnly = True
         MaxLength = 1
-        TabOrder = 4
+        TabOrder = 6
       end
       object Label1: TLabel[5]
         Left = 40
@@ -123,20 +171,30 @@ inherited cadClienteF: TcadClienteF
         Top = 80
         Width = 90
         Caption = 'Nome do Cliente'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
         ParentColor = False
+        ParentFont = False
       end
       object Label2: TLabel[6]
-        Left = 41
+        Left = 116
         Height = 15
-        Top = 122
+        Top = 136
         Width = 49
         Caption = 'Cpf/Cnpj'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clRed
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
         ParentColor = False
+        ParentFont = False
       end
       object Label3: TLabel[7]
-        Left = 288
+        Left = 463
         Height = 15
-        Top = 122
+        Top = 136
         Width = 26
         Caption = 'Tipo '
         ParentColor = False
@@ -148,6 +206,67 @@ inherited cadClienteF: TcadClienteF
         Width = 39
         Caption = 'Código'
         ParentColor = False
+      end
+      object Panel4: TPanel[9]
+        Left = 0
+        Height = 50
+        Top = 324
+        Width = 936
+        Align = alBottom
+        Alignment = taRightJustify
+        Caption = 'Oh Patrão! '
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -27
+        Font.Name = 'Franklin Gothic Medium'
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsItalic]
+        ParentFont = False
+        TabOrder = 8
+      end
+      object ComboBox2: TComboBox[10]
+        Left = 40
+        Height = 23
+        Top = 152
+        Width = 56
+        ItemHeight = 15
+        ItemIndex = 0
+        Items.Strings = (
+          'Cpf'
+          'Cnpj'
+        )
+        OnExit = MaskEdit2Click
+        TabOrder = 2
+        Text = 'Cpf'
+      end
+      object MaskEdit1: TMaskEdit[11]
+        Left = 116
+        Height = 23
+        Top = 152
+        Width = 112
+        MaxLength = 14
+        TabOrder = 3
+        OnClick = MaskEdit2Click
+        OnEditingDone = MaskEdit1EditingDone
+        OnExit = MaskEdit1Exit
+        EditMask = '000.000.000-00;1;_'
+        Text = '   .   .   -  '
+        SpaceChar = '_'
+      end
+      object MaskEdit2: TMaskEdit[12]
+        Left = 116
+        Height = 23
+        Top = 152
+        Width = 112
+        MaxLength = 18
+        TabOrder = 4
+        Visible = False
+        OnClick = MaskEdit2Click
+        OnEditingDone = MaskEdit1EditingDone
+        OnExit = MaskEdit2Exit
+        EditMask = '00.000.000/0000-00;1;_'
+        Text = '  .   .   /    -  '
+        SpaceChar = '_'
       end
     end
   end

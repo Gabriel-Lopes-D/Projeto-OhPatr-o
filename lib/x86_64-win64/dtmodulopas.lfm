@@ -1,8 +1,8 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
   Height = 430
-  HorizontalOffset = 783
-  VerticalOffset = 129
+  HorizontalOffset = 1175
+  VerticalOffset = 184
   Width = 558
   object qryCategoria: TZQuery
     Connection = ZConnection1
@@ -13,7 +13,6 @@ object DataModule1: TDataModule1
       'select * from categoria_produto'
     )
     Params = <>
-    DataSource = cadOrcamentoF.dsOrcamento
     Left = 88
     Top = 48
     object qryCategoriacategoriaprodutoid: TLongintField
@@ -254,11 +253,12 @@ object DataModule1: TDataModule1
       'AutoEncodeStrings=True'
       'controls_cp=CP_UTF8'
     )
-    HostName = 'localhost'
+    Connected = True
+    HostName = 'ohpatrao.chuot5bcwxis.us-east-1.rds.amazonaws.com'
     Port = 5432
     Database = 'postgres'
     User = 'postgres'
-    Password = 'aw2000'
+    Password = 'aw2000()'
     Protocol = 'postgresql'
     Left = 80
     Top = 152
@@ -391,7 +391,7 @@ object DataModule1: TDataModule1
     CachedUpdates = True
     AfterInsert = qryClienteAfterInsert
     SQL.Strings = (
-      'SELECT * FROM CLIENTE'
+      'select * from cliente'
     )
     Params = <>
     Left = 408
@@ -656,6 +656,26 @@ object DataModule1: TDataModule1
       Required = True
       DisplayFormat = '###,##0.00'
       Precision = 983042
+    end
+    object qryOrc_itensvl_Total_orc: TLongintField
+      DefaultExpression = 'sum (vl_total)'
+      FieldKind = fkCalculated
+      FieldName = 'vl_Total_orc'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qryOrc_itensvl_total_temp: TCurrencyField
+      DefaultExpression = 'sum (vl_total)'
+      FieldKind = fkCalculated
+      FieldName = 'vl_total_temp'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
     end
   end
   object ZUpdtOrc_itens: TZUpdateSQL

@@ -1,12 +1,33 @@
 object fMain: TfMain
-  Left = 1119
-  Height = 240
-  Top = 252
-  Width = 325
-  Caption = 'Saber Ti'
+  Left = 247
+  Height = 644
+  Top = 117
+  Width = 985
+  Align = alCustom
+  Caption = 'ohPatrão'
+  ClientHeight = 624
+  ClientWidth = 985
   Menu = MainMenu1
   LCLVersion = '2.2.4.0'
-  WindowState = wsMaximized
+  WindowState = wsFullScreen
+  object Label1: TLabel
+    Left = 0
+    Height = 81
+    Top = 43
+    Width = 985
+    Align = alBottom
+    Alignment = taCenter
+    BorderSpacing.Bottom = 500
+    Caption = 'Oh Patrão!'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -64
+    Font.Name = 'Franklin Gothic Medium'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
   object MainMenu1: TMainMenu
     Left = 32
     Top = 24
