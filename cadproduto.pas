@@ -193,6 +193,8 @@ begin
 end;
 
 procedure TcadProdutoF.btnExcluirClick(Sender: TObject);
+var
+  erro: Boolean;
 begin
 
   if (DBEdit1.Text = '') OR (dbEditCategoria.Text = '') OR (DBEdit5.Text = '') then
@@ -202,9 +204,23 @@ begin
   else begin
        if  MessageDlg('Você tem certeza que deseja excluir o registro?', mtConfirmation,[mbyes,mbno],0) = mryes then
            begin
-           inherited;
-           DataModule1.qryProduto.Delete;
-           DataModule1.qryProduto.ApplyUpdates;
+           try
+                 try
+                    inherited;
+                    DataModule1.qryProduto.Delete;
+                    DataModule1.qryProduto.ApplyUpdates;
+                    erro:= False;
+                 except on e: Exception do
+                        begin
+                    erro:= True;
+                    ShowMessage('Erro ao realizar operação, tente novamente!' + #13 + #13+'Motivo: '+e.Message);
+                    exit;
+                        end;
+                 end;
+              finally
+                 if erro = False then
+                 ShowMessage('Operação realizada com sucesso');
+              end;
            end;
   end;
 end;

@@ -96,22 +96,34 @@ end;
 
 
 procedure TcadcategoriaProdF.btnGravarClick(Sender: TObject);
+var
+  erro: Boolean;
 begin
 
     if DBEdit1.Text = '' then
     begin
-    ShowMessage('A descrição da catedoria do produto não pode ser vazia!');
+         ShowMessage('A descrição da catedoria do produto não pode ser vazia!');
     end
     else begin
-    inherited;
-    dsCategoria.DataSet.post;
-    DataModule1.qryCategoria.ApplyUpdates;
+      inherited;
+      try
+         try
+            dsCategoria.DataSet.post;
+            DataModule1.qryCategoria.ApplyUpdates;
+            erro:= False;
+         except
+            erro:= True;
+         end;
+      finally
+      if erro = True then
+         ShowMessage('Ocorreu um erro, alterações não foram gravadas!');
+      end;
     end;
-
-
 end;
 
 procedure TcadcategoriaProdF.btnExcluirClick(Sender: TObject);
+var
+  erro: Boolean;
 begin
      if DBEdit1.Text = '' then
         begin
@@ -120,9 +132,23 @@ begin
      else begin
          if  MessageDlg('Você tem certeza que deseja excluir o registro?', mtConfirmation,[mbyes,mbno],0) = mryes then
          begin
-              inherited;
-              DataModule1.qryCategoria.Delete;
-              DataModule1.qryCategoria.ApplyUpdates;
+              try
+                 try
+                    inherited;
+                    DataModule1.qryCategoria.Delete;
+                    DataModule1.qryCategoria.ApplyUpdates;
+                    erro:= False;
+                 except on e: Exception do
+                        begin
+                    erro:= True;
+                    ShowMessage('Erro ao realizar operação, tente novamente!' + #13 + #13+'Motivo: '+e.Message);
+                    exit;
+                        end;
+                 end;
+              finally
+                 if erro = False then
+                 ShowMessage('Operação realizada com sucesso');
+              end;
          end;
     end;
 end;

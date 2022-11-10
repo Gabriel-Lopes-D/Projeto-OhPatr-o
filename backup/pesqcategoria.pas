@@ -18,6 +18,8 @@ type
     DBEdit1: TDBEdit;
     DBGrid1: TDBGrid;
     Panel1: TPanel;
+    procedure DBEdit1KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
+      );
     procedure DBGrid1DblClick(Sender: TObject);
   private
 
@@ -43,6 +45,13 @@ begin
      DataModule1.qryProdutocategoriaprodutoid.AsInteger:= DataModule1.qryCategoriacategoriaprodutoid.AsInteger;
      cadProdutoF.Label4.Caption:= DataModule1.qryCategoriads_categoria_produto.AsString;
      close;
+end;
+
+procedure TpesqCategoriaF.DBEdit1KeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Ord(Key) = 13  then
+
 end;
 
 end.

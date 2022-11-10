@@ -1,25 +1,25 @@
 inherited cadOrcamentoF: TcadOrcamentoF
-  Left = 709
-  Height = 644
-  Top = 163
-  Width = 1321
+  Left = 0
+  Height = 307
+  Top = 692
+  Width = 837
   Caption = 'Orçamento'
-  ClientHeight = 644
-  ClientWidth = 1321
+  ClientHeight = 307
+  ClientWidth = 837
   OnCreate = FormCreate
   WindowState = wsNormal
   inherited pcMainCad: TPageControl
-    Height = 644
-    Width = 1321
+    Height = 307
+    Width = 837
     ActivePage = tsCadastro
     TabIndex = 1
     OnChange = pcMainCadChange
     inherited tsPesquisa: TTabSheet
-      ClientHeight = 616
-      ClientWidth = 1313
+      ClientHeight = 279
+      ClientWidth = 829
       inherited Panel1: TPanel
-        Width = 1313
-        ClientWidth = 1313
+        Width = 829
+        ClientWidth = 829
         inherited edtCampoPesquisa: TEdit
           Left = 85
           Width = 96
@@ -30,7 +30,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
           OnClick = btnPesquisaClick
         end
         inherited btnNovo: TBitBtn
-          Left = 1185
+          Left = 701
           Height = 44
           Top = 11
           Width = 117
@@ -72,9 +72,9 @@ inherited cadOrcamentoF: TcadOrcamentoF
       end
       object DBGrid1: TDBGrid[1]
         Left = 0
-        Height = 500
+        Height = 163
         Top = 66
-        Width = 1313
+        Width = 829
         Align = alClient
         Color = clWindow
         Columns = <        
@@ -110,8 +110,8 @@ inherited cadOrcamentoF: TcadOrcamentoF
       object Panel5: TPanel[2]
         Left = 0
         Height = 50
-        Top = 566
-        Width = 1313
+        Top = 229
+        Width = 829
         Align = alBottom
         Alignment = taRightJustify
         Caption = 'Oh Patrão! '
@@ -126,13 +126,13 @@ inherited cadOrcamentoF: TcadOrcamentoF
       end
     end
     inherited tsCadastro: TTabSheet
-      ClientHeight = 616
-      ClientWidth = 1313
+      ClientHeight = 279
+      ClientWidth = 829
       inherited Panel2: TPanel
         Height = 50
-        Width = 1313
+        Width = 829
         ClientHeight = 50
-        ClientWidth = 1313
+        ClientWidth = 829
         inherited btnGravar: TBitBtn
           Top = 8
           OnClick = btnGravarClick
@@ -151,10 +151,10 @@ inherited cadOrcamentoF: TcadOrcamentoF
         Left = 0
         Height = 94
         Top = 50
-        Width = 1313
+        Width = 829
         Align = alTop
         ClientHeight = 94
-        ClientWidth = 1313
+        ClientWidth = 829
         TabOrder = 1
         object DBEdit1: TDBEdit
           Left = 24
@@ -222,7 +222,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
           ParentColor = False
         end
         object BitBtn2: TBitBtn
-          Left = 1199
+          Left = 991
           Height = 32
           Top = 31
           Width = 83
@@ -325,7 +325,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
           Left = 1104
           Height = 32
           Top = 31
-          Width = 85
+          Width = 0
           Align = alRight
           Anchors = [akTop, akLeft, akRight]
           BorderSpacing.Top = 30
@@ -459,11 +459,11 @@ inherited cadOrcamentoF: TcadOrcamentoF
       object Panel4: TPanel[2]
         Left = 0
         Height = 82
-        Top = 534
-        Width = 1313
+        Top = 197
+        Width = 829
         Align = alBottom
         ClientHeight = 82
-        ClientWidth = 1313
+        ClientWidth = 829
         TabOrder = 2
         object DBEdit4: TDBEdit
           Left = 152
@@ -583,7 +583,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
           ParentFont = False
         end
         object Label8: TLabel
-          Left = 1177
+          Left = 693
           Height = 40
           Top = 41
           Width = 135
@@ -602,9 +602,9 @@ inherited cadOrcamentoF: TcadOrcamentoF
       end
       object DBGrid2: TDBGrid[3]
         Left = 0
-        Height = 390
+        Height = 53
         Top = 144
-        Width = 1313
+        Width = 829
         Align = alClient
         Color = clWindow
         Columns = <        

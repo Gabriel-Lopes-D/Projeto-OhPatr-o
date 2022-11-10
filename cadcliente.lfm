@@ -1,25 +1,21 @@
 inherited cadClienteF: TcadClienteF
-  Left = 944
-  Height = 644
-  Top = 128
-  Width = 1321
+  Left = 776
+  Top = 286
+  Width = 944
   Caption = 'Cliente'
-  ClientHeight = 644
-  ClientWidth = 1321
+  ClientWidth = 944
   OnCreate = FormCreate
   OnShow = FormShow
   WindowState = wsNormal
   inherited pcMainCad: TPageControl
-    Height = 644
-    Width = 1321
+    Width = 944
     ActivePage = tsCadastro
     TabIndex = 1
     inherited tsPesquisa: TTabSheet
-      ClientHeight = 616
-      ClientWidth = 1313
+      ClientWidth = 936
       inherited Panel1: TPanel
-        Width = 1313
-        ClientWidth = 1313
+        Width = 936
+        ClientWidth = 936
         inherited edtCampoPesquisa: TEdit
           Left = 152
           Top = 29
@@ -30,7 +26,7 @@ inherited cadClienteF: TcadClienteF
           OnClick = btnPesquisaClick
         end
         inherited btnNovo: TBitBtn
-          Left = 1185
+          Left = 808
           Height = 44
           Top = 11
           Width = 117
@@ -59,9 +55,9 @@ inherited cadClienteF: TcadClienteF
       end
       object DBGrid1: TDBGrid[1]
         Left = 0
-        Height = 500
+        Height = 258
         Top = 66
-        Width = 1313
+        Width = 936
         Align = alClient
         Color = clWindow
         Columns = <        
@@ -95,8 +91,8 @@ inherited cadClienteF: TcadClienteF
       object Panel3: TPanel[2]
         Left = 0
         Height = 50
-        Top = 566
-        Width = 1313
+        Top = 324
+        Width = 936
         Align = alBottom
         Alignment = taRightJustify
         Caption = 'Oh Patrão! '
@@ -111,11 +107,10 @@ inherited cadClienteF: TcadClienteF
       end
     end
     inherited tsCadastro: TTabSheet
-      ClientHeight = 616
-      ClientWidth = 1313
+      ClientWidth = 936
       inherited Panel2: TPanel
-        Width = 1313
-        ClientWidth = 1313
+        Width = 936
+        ClientWidth = 936
         inherited btnGravar: TBitBtn
           OnClick = btnGravarClick
         end
@@ -215,8 +210,8 @@ inherited cadClienteF: TcadClienteF
       object Panel4: TPanel[9]
         Left = 0
         Height = 50
-        Top = 566
-        Width = 1313
+        Top = 324
+        Width = 936
         Align = alBottom
         Alignment = taRightJustify
         Caption = 'Oh Patrão! '

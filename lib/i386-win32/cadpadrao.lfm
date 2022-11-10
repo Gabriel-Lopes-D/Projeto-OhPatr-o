@@ -1,12 +1,12 @@
 object cadPadraoF: TcadPadraoF
-  Left = 485
+  Left = 755
   Height = 402
-  Top = 75
+  Top = 229
   Width = 578
   Caption = 'cadPadrao'
   ClientHeight = 402
   ClientWidth = 578
-  LCLVersion = '2.2.2.0'
+  LCLVersion = '2.2.4.0'
   WindowState = wsMaximized
   object pcMainCad: TPageControl
     Left = 0

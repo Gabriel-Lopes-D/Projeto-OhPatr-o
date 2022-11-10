@@ -1,12 +1,12 @@
 inherited cadcategoriaProdF: TcadcategoriaProdF
-  Left = 639
-  Height = 644
-  Top = 164
-  Width = 1321
+  Left = 1706
+  Height = 307
+  Top = 346
+  Width = 837
   Align = alClient
   Caption = 'Cadastro Categoria'
-  ClientHeight = 644
-  ClientWidth = 1321
+  ClientHeight = 307
+  ClientWidth = 837
   Font.CharSet = ANSI_CHARSET
   Font.Height = -12
   Font.Name = 'Arial'
@@ -16,14 +16,16 @@ inherited cadcategoriaProdF: TcadcategoriaProdF
   OnShow = FormShow
   WindowState = wsNormal
   inherited pcMainCad: TPageControl
-    Height = 644
-    Width = 1321
+    Height = 307
+    Width = 837
+    ActivePage = tsCadastro
+    TabIndex = 1
     inherited tsPesquisa: TTabSheet
-      ClientHeight = 616
-      ClientWidth = 1313
+      ClientHeight = 279
+      ClientWidth = 829
       inherited Panel1: TPanel
-        Width = 1313
-        ClientWidth = 1313
+        Width = 829
+        ClientWidth = 829
         inherited edtCampoPesquisa: TEdit
           Left = 120
           Top = 24
@@ -34,7 +36,7 @@ inherited cadcategoriaProdF: TcadcategoriaProdF
           OnClick = btnPesquisaClick
         end
         inherited btnNovo: TBitBtn
-          Left = 1185
+          Left = 701
           Height = 44
           Top = 11
           Width = 117
@@ -62,9 +64,9 @@ inherited cadcategoriaProdF: TcadcategoriaProdF
       end
       object DBGrid1: TDBGrid[1]
         Left = 0
-        Height = 511
+        Height = 174
         Top = 66
-        Width = 1313
+        Width = 829
         Align = alClient
         Color = clWindow
         Columns = <        
@@ -87,8 +89,8 @@ inherited cadcategoriaProdF: TcadcategoriaProdF
       object Panel3: TPanel[2]
         Left = 0
         Height = 39
-        Top = 577
-        Width = 1313
+        Top = 240
+        Width = 829
         Align = alBottom
         Alignment = taRightJustify
         Caption = 'Oh Patrão! '
@@ -103,11 +105,11 @@ inherited cadcategoriaProdF: TcadcategoriaProdF
       end
     end
     inherited tsCadastro: TTabSheet
-      ClientHeight = 616
-      ClientWidth = 1313
+      ClientHeight = 279
+      ClientWidth = 829
       inherited Panel2: TPanel
-        Width = 1313
-        ClientWidth = 1313
+        Width = 829
+        ClientWidth = 829
         inherited btnGravar: TBitBtn
           OnClick = btnGravarClick
         end
@@ -166,8 +168,8 @@ inherited cadcategoriaProdF: TcadcategoriaProdF
       object Panel4: TPanel[5]
         Left = 0
         Height = 50
-        Top = 566
-        Width = 1313
+        Top = 229
+        Width = 829
         Align = alBottom
         Alignment = taRightJustify
         Caption = 'Oh Patrão! '

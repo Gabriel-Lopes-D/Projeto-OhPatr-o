@@ -105,19 +105,34 @@ begin
 end;
 
 procedure TcadItemOrcF.DBGrid1DblClick(Sender: TObject);
+var
+  status: Integer;
 begin
-  if SpinEdit1.Text < 1 then
+  if StrToInt(SpinEdit1.Text) < 1 then
   begin
      ShowMessage('Valor inválido na quantidade do produto!');
+     status:=2;
   end else begin
-    DataModule1.qryOrc_itensprodutoid.AsInteger:= DataModule1.qryProdutoprodutoid.AsInteger;
-    DataModule1.qryOrc_itensprodutodesc.AsString:= DataModule1.qryProdutods_produto.AsString;
-    DataModule1.qryOrc_itensqt_produto.AsInteger:= StrToInt(SpinEdit1.Text);
-    DataModule1.qryOrc_itensvl_unitario.AsFloat:=DataModule1.qryProdutovl_venda_produto.AsFloat;
-    DataModule1.qryOrc_itensvl_total.AsFloat:= DataModule1.qryProdutovl_venda_produto.AsFloat * StrToInt(SpinEdit1.Text);
-    DataModule1.qryOrc_itens.Post;
-    close;
-    end;
+      status:=1;
+  end;
+  if DataModule1.qryProdutostatus_produto.AsString = 'INATIVO' then
+     begin
+        ShowMessage('Produto inativo!');
+        status:=2;
+     end else begin
+         status:=1;
+      end;
+
+  if status = 1 then
+  begin
+       DataModule1.qryOrc_itensprodutoid.AsInteger:= DataModule1.qryProdutoprodutoid.AsInteger;
+       DataModule1.qryOrc_itensprodutodesc.AsString:= DataModule1.qryProdutods_produto.AsString;
+       DataModule1.qryOrc_itensqt_produto.AsInteger:= StrToInt(SpinEdit1.Text);
+       DataModule1.qryOrc_itensvl_unitario.AsFloat:=DataModule1.qryProdutovl_venda_produto.AsFloat;
+       DataModule1.qryOrc_itensvl_total.AsFloat:= DataModule1.qryProdutovl_venda_produto.AsFloat * StrToInt(SpinEdit1.Text);
+       DataModule1.qryOrc_itens.Post;
+       close;
+  end;
 end;
 
 

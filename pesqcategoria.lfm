@@ -1,20 +1,20 @@
 object pesqCategoriaF: TpesqCategoriaF
-  Left = 1192
-  Height = 276
-  Top = 226
-  Width = 526
+  Left = 705
+  Height = 307
+  Top = 280
+  Width = 837
   Caption = 'pesqCategoriaF'
-  ClientHeight = 276
-  ClientWidth = 526
+  ClientHeight = 307
+  ClientWidth = 837
   LCLVersion = '2.2.4.0'
   object Panel1: TPanel
     Left = 0
     Height = 64
     Top = 0
-    Width = 526
+    Width = 837
     Align = alTop
     ClientHeight = 64
-    ClientWidth = 526
+    ClientWidth = 837
     TabOrder = 0
     object DBEdit1: TDBEdit
       Left = 40
@@ -113,9 +113,9 @@ object pesqCategoriaF: TpesqCategoriaF
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Height = 212
+    Height = 243
     Top = 64
-    Width = 526
+    Width = 837
     Align = alClient
     Color = clWindow
     Columns = <    
