@@ -35,6 +35,8 @@ type
     procedure btnNovoClick(Sender: TObject);
     procedure btnPesquisaClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
+    procedure edtCampoPesquisaKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure MaskEdit1EditingDone(Sender: TObject);
@@ -117,6 +119,13 @@ begin
    dbEdtCpfCnpjCli.Visible:=True;
    MaskEdit1.Visible:=False;
    MaskEdit2.Visible:=False;
+end;
+
+procedure TcadClienteF.edtCampoPesquisaKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Ord(Key) = 13  then
+   btnPesquisaClick(cadClienteF);
 end;
 
 procedure TcadClienteF.FormCreate(Sender: TObject);

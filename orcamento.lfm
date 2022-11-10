@@ -180,7 +180,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
           Left = 904
           Height = 23
           Top = 24
-          Width = 24
+          Width = 48
           DataField = 'orcamentoid'
           DataSource = dsOrcamento
           Alignment = taRightJustify

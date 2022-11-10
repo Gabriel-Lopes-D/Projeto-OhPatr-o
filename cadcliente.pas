@@ -175,6 +175,8 @@ begin
 end;
 
 procedure TcadClienteF.btnGravarClick(Sender: TObject);//Grava os dados
+var
+   erro: Boolean;
 begin
    if (dbEdtNomeCli.Text = '') OR (MaskEdit1.Text = '') OR (MaskEdit2.Text = '') then
    begin
@@ -182,8 +184,19 @@ begin
    end
    else begin
         inherited;
-        dsCliente.DataSet.Post;
-        DataModule1.qryCliente.ApplyUpdates;
+        try
+           try
+              dsCliente.DataSet.Post;
+              DataModule1.qryCliente.ApplyUpdates;
+              erro:= False;
+           except
+              erro:= True;
+           end;
+        finally
+           if erro = True then
+           ShowMessage('Ocorreu um erro, alterações não foram gravadas!');
+        end;
+
    end;
 end;
 

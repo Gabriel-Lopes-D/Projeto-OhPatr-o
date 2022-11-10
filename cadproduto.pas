@@ -165,16 +165,30 @@ begin
 end;
 
 procedure TcadProdutoF.btnGravarClick(Sender: TObject);
+var
+  erro: Boolean;
 begin
+
    if (DBEdit1.Text = '') OR (dbEditCategoria.Text = '') OR (DBEdit5.Text = '') then
    begin
       ShowMessage('Erro! Existem campos vazios');
    end
    else begin
      inherited;
-     dsProduto.DataSet.post;
-     DataModule1.qryProduto.ApplyUpdates;
-   end
+     try
+        try
+           dsProduto.DataSet.post;
+           DataModule1.qryProduto.ApplyUpdates;
+           erro:= False;
+        except
+           erro:= True;
+        end;
+     finally
+        if erro = True then
+           ShowMessage('Ocorreu um erro, alterações não foram gravadas!');
+     end;
+
+   end;
 
 end;
 

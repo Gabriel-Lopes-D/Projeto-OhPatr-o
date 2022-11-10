@@ -150,7 +150,7 @@ procedure TcadcategoriaProdF.edtCampoPesquisaKeyDown(Sender: TObject;
   var Key: Word; Shift: TShiftState);
 begin
   if Ord(Key) = 13  then
-     btnPesquisaClick(cadcategoriaProdF)
+     btnPesquisaClick(cadcategoriaProdF);
 
 end;
 

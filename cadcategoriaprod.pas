@@ -96,19 +96,29 @@ end;
 
 
 procedure TcadcategoriaProdF.btnGravarClick(Sender: TObject);
+var
+  erro: Boolean;
 begin
 
     if DBEdit1.Text = '' then
     begin
-    ShowMessage('A descrição da catedoria do produto não pode ser vazia!');
+         ShowMessage('A descrição da catedoria do produto não pode ser vazia!');
     end
     else begin
-    inherited;
-    dsCategoria.DataSet.post;
-    DataModule1.qryCategoria.ApplyUpdates;
+      inherited;
+      try
+         try
+            dsCategoria.DataSet.post;
+            DataModule1.qryCategoria.ApplyUpdates;
+            erro:= False;
+         except
+            erro:= True;
+         end;
+      finally
+      if erro = True then
+         ShowMessage('Ocorreu um erro, alterações não foram gravadas!');
+      end;
     end;
-
-
 end;
 
 procedure TcadcategoriaProdF.btnExcluirClick(Sender: TObject);

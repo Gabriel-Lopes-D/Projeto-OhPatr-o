@@ -14,6 +14,7 @@ type
 
   TcadItemOrcF = class(TForm)
     BitBtn1: TBitBtn;
+    BitBtn2: TBitBtn;
     ComboBox1: TComboBox;
     dsProdutos: TDataSource;
     DBGrid1: TDBGrid;
@@ -23,10 +24,10 @@ type
     Panel2: TPanel;
     SpinEdit1: TSpinEdit;
     procedure BitBtn1Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
     procedure KeyDown(Sender: TObject; var Key: Word; Shift: TShiftState
       );
     procedure DBGrid1DblClick(Sender: TObject);
-    procedure SpinEdit1ChangeBounds(Sender: TObject);
   private
 
   public
@@ -89,6 +90,13 @@ begin
     DataModule1.qryProduto.Open;
 end;
 
+procedure TcadItemOrcF.BitBtn2Click(Sender: TObject);
+begin
+  DataModule1.qryOrc_itens.Cancel;
+  cadItemOrcF.Close;
+  DataModule1.qryOrc_itens.Open;
+end;
+
 procedure TcadItemOrcF.KeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
@@ -98,19 +106,20 @@ end;
 
 procedure TcadItemOrcF.DBGrid1DblClick(Sender: TObject);
 begin
-  DataModule1.qryOrc_itensprodutoid.AsInteger:= DataModule1.qryProdutoprodutoid.AsInteger;
-  DataModule1.qryOrc_itensprodutodesc.AsString:= DataModule1.qryProdutods_produto.AsString;
-  DataModule1.qryOrc_itensqt_produto.AsInteger:= StrToInt(SpinEdit1.Text);
-  DataModule1.qryOrc_itensvl_unitario.AsFloat:=DataModule1.qryProdutovl_venda_produto.AsFloat;
-  DataModule1.qryOrc_itensvl_total.AsFloat:= DataModule1.qryProdutovl_venda_produto.AsFloat * StrToInt(SpinEdit1.Text);
-  DataModule1.qryOrc_itens.Post;
-  close;
+  if StrToInt(SpinEdit1.Text) < 1 then
+  begin
+     ShowMessage('Valor inválido na quantidade do produto!');
+  end else begin
+    DataModule1.qryOrc_itensprodutoid.AsInteger:= DataModule1.qryProdutoprodutoid.AsInteger;
+    DataModule1.qryOrc_itensprodutodesc.AsString:= DataModule1.qryProdutods_produto.AsString;
+    DataModule1.qryOrc_itensqt_produto.AsInteger:= StrToInt(SpinEdit1.Text);
+    DataModule1.qryOrc_itensvl_unitario.AsFloat:=DataModule1.qryProdutovl_venda_produto.AsFloat;
+    DataModule1.qryOrc_itensvl_total.AsFloat:= DataModule1.qryProdutovl_venda_produto.AsFloat * StrToInt(SpinEdit1.Text);
+    DataModule1.qryOrc_itens.Post;
+    close;
+    end;
 end;
 
-procedure TcadItemOrcF.SpinEdit1ChangeBounds(Sender: TObject);
-begin
- // if SpinEdit1.t;
-end;
 
 
 end.

@@ -148,6 +148,7 @@ begin
   DataModule1.qryOrc_itens.Open;
   atribuiNomeCliente(DBEdit1.Text);
   DataModule1.qryOrc_itens.Edit;
+  DataModule1.qryOrcamento.Edit;
 end;
 
 procedure TcadOrcamentoF.KeyDown(Sender: TObject;
@@ -200,13 +201,25 @@ begin
 end;
 
 procedure TcadOrcamentoF.btnGravarClick(Sender: TObject);
+var
+  erro: Boolean;
 begin
   inherited;
-  DataModule1.qryOrcamentovl_total_orcamento.AsFloat:= DataModule1.qryOrc_itensvl_total.AsFloat;
-  dsOrcamento.DataSet.Post;
-  DataModule1.qryOrcamento.ApplyUpdates;
-  DataModule1.qryOrc_itens.Post;
-  DataModule1.qryOrc_itens.ApplyUpdates;
+  try
+    try
+      DataModule1.qryOrcamentovl_total_orcamento.AsFloat:= DataModule1.qryOrc_itensvl_total.AsFloat;
+      dsOrcamento.DataSet.Post;
+      DataModule1.qryOrcamento.ApplyUpdates;
+      DataModule1.qryOrc_itens.ApplyUpdates;
+      erro:= False;
+    except
+      erro:= True;
+    end;
+  finally
+    if erro = True then
+     ShowMessage('Ocorreu um erro, alterações não foram gravadas!');
+  end;
+
 end;
 
 procedure TcadOrcamentoF.btnExcluirClick(Sender: TObject);
@@ -230,29 +243,36 @@ procedure TcadOrcamentoF.BitBtn1Click(Sender: TObject);
 var
 id : String;
 begin
-    dsOrcItens.DataSet.Insert;
 
-    //Busca o ultimo código do orçamento atual
-    DataModule1.qryGenerica.close;
-    DataModule1.qryGenerica.SQL.Clear;
-    DataModule1.qryGenerica.SQL.Add('SELECT MAX(orcamentoitemid) + 1 PROXCODIGO '+
+    if  DBEdit1.Text = '' then
+     begin
+     ShowMessage('O campo cliente não pode estar vazio!');
+
+     end else begin
+       dsOrcItens.DataSet.Insert;
+
+       //Busca o ultimo código do orçamento atual
+       DataModule1.qryGenerica.close;
+       DataModule1.qryGenerica.SQL.Clear;
+       DataModule1.qryGenerica.SQL.Add('SELECT MAX(orcamentoitemid) + 1 PROXCODIGO '+
                                     ' FROM orcamento_item '+
                                     ' WHERE ORCAMENTOID = ' + IntToStr(DataModule1.qryOrcamentoorcamentoid.AsInteger));
-    DataModule1.qryGenerica.Open;
+       DataModule1.qryGenerica.Open;
 
-    id := DataModule1.qryGenerica.FieldByName('PROXCODIGO').AsString;
+       id := DataModule1.qryGenerica.FieldByName('PROXCODIGO').AsString;
 
-    if id = '' then
-       DataModule1.qryOrc_itensorcamentoitemid.AsInteger := 1
-    else
-       DataModule1.qryOrc_itensorcamentoitemid.AsInteger := StrToInt(id);
+       if id = '' then
+          DataModule1.qryOrc_itensorcamentoitemid.AsInteger := 1
+       else
+           DataModule1.qryOrc_itensorcamentoitemid.AsInteger := StrToInt(id);
 
-    //Passando o código do orçamentoid
-    DataModule1.qryOrc_itensorcamentoid.AsInteger := DataModule1.qryOrcamentoorcamentoid.AsInteger;
+       //Passando o código do orçamentoid
+       DataModule1.qryOrc_itensorcamentoid.AsInteger := DataModule1.qryOrcamentoorcamentoid.AsInteger;
 
-    //abre a tela de que permita fazer a busca do produto
-    cadItemOrcF:= TcadItemOrcF.create(Self);
-    cadItemOrcF.ShowModal;
+       //abre a tela de que permita fazer a busca do produto
+       cadItemOrcF:= TcadItemOrcF.create(Self);
+       cadItemOrcF.ShowModal;
+     end;
 
 end;
 
@@ -270,7 +290,6 @@ begin
   frReport1.PrepareReport;
   frReport1.ShowReport;;
 end;
-
 
 
 end.

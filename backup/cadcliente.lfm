@@ -12,8 +12,6 @@ inherited cadClienteF: TcadClienteF
   inherited pcMainCad: TPageControl
     Height = 644
     Width = 1321
-    ActivePage = tsCadastro
-    TabIndex = 1
     inherited tsPesquisa: TTabSheet
       ClientHeight = 616
       ClientWidth = 1313
@@ -23,6 +21,7 @@ inherited cadClienteF: TcadClienteF
         inherited edtCampoPesquisa: TEdit
           Left = 152
           Top = 29
+          OnKeyDown = edtCampoPesquisaKeyDown
         end
         inherited btnPesquisa: TBitBtn
           Left = 416

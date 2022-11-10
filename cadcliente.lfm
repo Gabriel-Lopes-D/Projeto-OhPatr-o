@@ -12,6 +12,8 @@ inherited cadClienteF: TcadClienteF
   inherited pcMainCad: TPageControl
     Height = 644
     Width = 1321
+    ActivePage = tsCadastro
+    TabIndex = 1
     inherited tsPesquisa: TTabSheet
       ClientHeight = 616
       ClientWidth = 1313
