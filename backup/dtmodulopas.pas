@@ -75,7 +75,6 @@ type
   public
 
     function getSequence(const pNomeSequence: String): String;
-    procedure SomaItens;
 
   end;
 
