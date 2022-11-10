@@ -32,7 +32,7 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dtModulopas"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="120"/>
+        <TopLine Value="77"/>
         <CursorPos X="18" Y="134"/>
         <UsageCount Value="122"/>
         <Loaded Value="True"/>
