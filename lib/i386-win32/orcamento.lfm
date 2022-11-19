@@ -1,25 +1,23 @@
 inherited cadOrcamentoF: TcadOrcamentoF
-  Left = 692
-  Height = 611
-  Top = 137
-  Width = 1475
+  Left = 678
+  Height = 539
+  Top = 184
+  Width = 1211
   Caption = 'Orçamento'
-  ClientHeight = 611
-  ClientWidth = 1475
+  ClientHeight = 539
+  ClientWidth = 1211
   OnCreate = FormCreate
   WindowState = wsNormal
   inherited pcMainCad: TPageControl
-    Height = 611
-    Width = 1475
-    ActivePage = tsCadastro
-    TabIndex = 1
+    Height = 539
+    Width = 1211
     OnChange = pcMainCadChange
     inherited tsPesquisa: TTabSheet
-      ClientHeight = 583
-      ClientWidth = 1467
+      ClientHeight = 511
+      ClientWidth = 1203
       inherited Panel1: TPanel
-        Width = 1467
-        ClientWidth = 1467
+        Width = 1203
+        ClientWidth = 1203
         inherited edtCampoPesquisa: TEdit
           Left = 85
           Width = 96
@@ -30,7 +28,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
           OnClick = btnPesquisaClick
         end
         inherited btnNovo: TBitBtn
-          Left = 1339
+          Left = 1075
           Height = 44
           Top = 11
           Width = 117
@@ -56,25 +54,35 @@ inherited cadOrcamentoF: TcadOrcamentoF
           TabOrder = 3
           Text = 'Id'
         end
-        object MaskEdit1: TMaskEdit[4]
+        object DateTimePicker1: TDateTimePicker[4]
           Left = 85
           Height = 23
           Top = 25
-          Width = 72
-          MaxLength = 10
+          Width = 83
+          CenturyFrom = 1941
+          MaxDate = 2958465
+          MinDate = -53780
           TabOrder = 4
+          TrailingSeparator = False
+          TextForNullDate = 'NULL'
+          LeadingZeros = True
           Visible = False
-          OnKeyDown = KeyDown
-          EditMask = '00/00/0000;1;_'
-          Text = '  /  /    '
-          SpaceChar = '_'
+          Kind = dtkDate
+          TimeFormat = tf24
+          TimeDisplay = tdHMS
+          DateMode = dmComboBox
+          Date = 44884
+          Time = 0.818028321758902
+          UseDefaultSeparators = True
+          HideDateTimeParts = []
+          MonthNames = 'Long'
         end
       end
       object DBGrid1: TDBGrid[1]
         Left = 0
-        Height = 467
+        Height = 395
         Top = 66
-        Width = 1467
+        Width = 1203
         Align = alClient
         Color = clWindow
         Columns = <        
@@ -110,8 +118,8 @@ inherited cadOrcamentoF: TcadOrcamentoF
       object Panel5: TPanel[2]
         Left = 0
         Height = 50
-        Top = 533
-        Width = 1467
+        Top = 461
+        Width = 1203
         Align = alBottom
         Alignment = taRightJustify
         Caption = 'Oh Patrão! '
@@ -126,13 +134,13 @@ inherited cadOrcamentoF: TcadOrcamentoF
       end
     end
     inherited tsCadastro: TTabSheet
-      ClientHeight = 583
-      ClientWidth = 1467
+      ClientHeight = 511
+      ClientWidth = 1203
       inherited Panel2: TPanel
         Height = 50
-        Width = 1467
+        Width = 1203
         ClientHeight = 50
-        ClientWidth = 1467
+        ClientWidth = 1203
         inherited btnGravar: TBitBtn
           Top = 8
           OnClick = btnGravarClick
@@ -151,10 +159,10 @@ inherited cadOrcamentoF: TcadOrcamentoF
         Left = 0
         Height = 94
         Top = 50
-        Width = 1467
+        Width = 1203
         Align = alTop
         ClientHeight = 94
-        ClientWidth = 1467
+        ClientWidth = 1203
         TabOrder = 1
         object DBEdit1: TDBEdit
           Left = 24
@@ -222,15 +230,11 @@ inherited cadOrcamentoF: TcadOrcamentoF
           ParentColor = False
         end
         object BitBtn1: TBitBtn
-          Left = 1328
+          Left = 973
           Height = 32
-          Top = 31
-          Width = 128
-          Align = alRight
-          Anchors = [akTop, akLeft, akRight]
-          BorderSpacing.Top = 30
-          BorderSpacing.Right = 10
-          BorderSpacing.Bottom = 30
+          Top = 23
+          Width = 96
+          Anchors = []
           Caption = 'Adicionar'
           Font.CharSet = ANSI_CHARSET
           Font.Height = -11
@@ -356,15 +360,11 @@ inherited cadOrcamentoF: TcadOrcamentoF
           ParentColor = False
         end
         object BitBtn2: TBitBtn
-          AnchorSideLeft.Control = BitBtn1
-          Left = 1188
+          Left = 1080
           Height = 32
-          Top = 31
-          Width = 110
-          Align = alRight
-          BorderSpacing.Top = 30
-          BorderSpacing.Right = 30
-          BorderSpacing.Bottom = 30
+          Top = 23
+          Width = 96
+          Anchors = [akTop]
           Caption = 'Excluir'
           Font.CharSet = ANSI_CHARSET
           Font.Height = -11
@@ -460,11 +460,11 @@ inherited cadOrcamentoF: TcadOrcamentoF
       object Panel4: TPanel[2]
         Left = 0
         Height = 82
-        Top = 501
-        Width = 1467
+        Top = 429
+        Width = 1203
         Align = alBottom
         ClientHeight = 82
-        ClientWidth = 1467
+        ClientWidth = 1203
         TabOrder = 2
         object DBEdit4: TDBEdit
           Left = 152
@@ -584,7 +584,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
           ParentFont = False
         end
         object Label8: TLabel
-          Left = 1331
+          Left = 1067
           Height = 40
           Top = 41
           Width = 135
@@ -603,9 +603,9 @@ inherited cadOrcamentoF: TcadOrcamentoF
       end
       object DBGrid2: TDBGrid[3]
         Left = 0
-        Height = 357
+        Height = 285
         Top = 144
-        Width = 1467
+        Width = 1203
         Align = alClient
         Color = clWindow
         Columns = <        

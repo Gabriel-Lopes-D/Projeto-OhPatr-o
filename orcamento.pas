@@ -6,8 +6,9 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBGrids, ExtCtrls,
-  DBCtrls, StdCtrls, Buttons, MaskEdit, DBExtCtrls, DBDateTimePicker, LR_Class,
-  LR_DBSet, cadPadrao, DB, dtModulopas, pesqcliente, cadItemOrc;
+  DBCtrls, StdCtrls, Buttons, MaskEdit, DBExtCtrls, DBDateTimePicker,
+  DateTimePicker, LR_Class, LR_DBSet, cadPadrao, DB, dtModulopas, pesqcliente,
+  cadItemOrc;
 
 type
 
@@ -20,6 +21,7 @@ type
     btnEditar: TBitBtn;
     Button1: TButton;
     ComboBox1: TComboBox;
+    DateTimePicker1: TDateTimePicker;
     DBDateTimePicker1: TDBDateTimePicker;
     dsOrcItens: TDataSource;
     DBEdit1: TDBEdit;
@@ -38,7 +40,6 @@ type
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
-    MaskEdit1: TMaskEdit;
     Panel3: TPanel;
     Panel4: TPanel;
     Panel5: TPanel;
@@ -76,6 +77,7 @@ implementation
 procedure TcadOrcamentoF.btnPesquisaClick(Sender: TObject);
 var
   AuxWhere: string;
+  AuxDate: String;
 begin
   //Esta procedure irá executar a pesquisa da Categoria
   if ComboBox1.Text = 'Id'then //Identifica o tipo de pesquisa
@@ -87,10 +89,8 @@ begin
     end;
   if ComboBox1.Text = 'Data'then
     begin
-       if MaskEdit1.Text = '' then
-          AuxWhere := '1 = 1'
-       else
-           AuxWhere := 'dt_orcamento = '+QuotedStr(MaskEdit1.Text);
+           AuxDate:= FormatDateTime('yyyy/mm/dd', DateTimePicker1.Date);
+           AuxWhere := 'dt_orcamento = '+QuotedStr(AuxDate);
     end;
   if ComboBox1.Text = 'Id Cliente'then
     begin
@@ -127,12 +127,12 @@ begin
   if (ComboBox1.Text = 'Data') OR (ComboBox1.Text = 'Id cliente')then
     begin
        edtCampoPesquisa.Visible:= False;
-     MaskEdit1.Visible:= True;
-     MaskEdit1.Text:= DateTimeToStr(Date)
+     DateTimePicker1.Visible:= True;
+     DateTimePicker1.Date:= Date;
     end;
   if ComboBox1.Text = 'Id'then
     begin
-    MaskEdit1.Visible:= False;
+    DateTimePicker1.Visible:= False;
     edtCampoPesquisa.Visible:= True
     end;
 
@@ -293,4 +293,5 @@ end;
 
 
 end.
+
 

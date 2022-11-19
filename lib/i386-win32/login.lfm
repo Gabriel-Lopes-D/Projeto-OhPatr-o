@@ -1,7 +1,7 @@
 object LoginF: TLoginF
-  Left = 873
+  Left = 481
   Height = 240
-  Top = 279
+  Top = 213
   Width = 309
   Caption = 'LoginF'
   ClientHeight = 240
