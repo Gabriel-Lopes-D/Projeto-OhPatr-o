@@ -347,7 +347,6 @@
         <TopLine Value="223"/>
         <CursorPos X="176" Y="223"/>
         <UsageCount Value="9"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\..\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\core\ZClasses.pas"/>
@@ -356,7 +355,6 @@
         <TopLine Value="42"/>
         <CursorPos X="55" Y="59"/>
         <UsageCount Value="6"/>
-        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit>
       <Unit>
         <Filename Value="..\..\..\lazarus\lcl\lresources.pp"/>
