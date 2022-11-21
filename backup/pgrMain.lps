@@ -10,8 +10,8 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="13"/>
-        <CursorPos X="10" Y="22"/>
+        <TopLine Value="25"/>
+        <CursorPos X="5" Y="54"/>
         <UsageCount Value="130"/>
         <Loaded Value="True"/>
       </Unit>
@@ -389,7 +389,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="24">
+    <JumpHistory HistoryIndex="25">
       <Position>
         <Filename Value="main.pas"/>
         <Caret Line="58" Column="3" TopLine="56"/>
@@ -489,6 +489,10 @@
       <Position>
         <Filename Value="pgrMain.lpr"/>
         <Caret Line="56" Column="18" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="pgrMain.lpr"/>
+        <Caret Line="22" Column="10" TopLine="13"/>
       </Position>
     </JumpHistory>
     <RunParams>
