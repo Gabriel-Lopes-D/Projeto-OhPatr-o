@@ -13,8 +13,9 @@
         <DpiAware Value="True"/>
       </XPManifest>
       <Icon Value="0"/>
-      <Resources Count="1">
+      <Resources Count="2">
         <Resource_0 FileName="C:\Program Files (x86)\PostgreSQL\10\bin\libpq.dll" Type="RCDATA" ResourceName="LIBPQ"/>
+        <Resource_1 FileName="C:\Windows\WinSxS\wow64_microsoft-windows-ntdll_31bf3856ad364e35_10.0.19041.2193_none_d7ff7321e5b4a492\ntdll.dll" Type="RCDATA" ResourceName="NTDLL"/>
       </Resources>
     </General>
     <BuildModes>
