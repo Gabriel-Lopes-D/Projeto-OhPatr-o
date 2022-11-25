@@ -1,8 +1,9 @@
 object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
   OldCreateOrder = False
   Height = 430
-  HorizontalOffset = 1057
-  VerticalOffset = 180
+  HorizontalOffset = 1175
+  VerticalOffset = 184
   Width = 558
   object qryCategoria: TZQuery
     Connection = ZConnection1
@@ -254,11 +255,12 @@ object DataModule1: TDataModule1
       'controls_cp=CP_UTF8'
     )
     Connected = True
-    HostName = 'localhost'
+    BeforeConnect = ZConnection1BeforeConnect
+    HostName = 'ohpatrao.chuot5bcwxis.us-east-1.rds.amazonaws.com'
     Port = 5432
     Database = 'postgres'
     User = 'postgres'
-    Password = 'aw2000'
+    Password = 'aw2000()'
     Protocol = 'postgresql'
     Left = 80
     Top = 152

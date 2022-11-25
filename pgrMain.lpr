@@ -19,6 +19,7 @@ uses
 
 begin
   RequireDerivedFormResource:=True;
+  Application.Title:='Oh patrão';
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TLoginF, LoginF);

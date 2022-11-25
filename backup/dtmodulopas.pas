@@ -5,7 +5,7 @@ unit dtModulopas;
 interface
 
 uses
-  Classes, SysUtils, DB, ZConnection, ZDataset, ZSqlUpdate;
+  Classes, SysUtils, DB, ZConnection, ZDataset, ZSqlUpdate,IniFiles,Forms, Dialogs;
 
 type
 
@@ -60,6 +60,7 @@ type
     ZUpdtCliente: TZUpdateSQL;
     ZUpdtProduto: TZUpdateSQL;
     ZUpdtCategoria: TZUpdateSQL;
+    procedure DataModuleCreate(Sender: TObject);
     procedure qryClienteAfterInsert(DataSet: TDataSet);
     procedure qryOrcamentoAfterInsert(DataSet: TDataSet);
     procedure qryOrcamentoNewRecord(DataSet: TDataSet);
@@ -68,6 +69,7 @@ type
     procedure qryProdutoAfterInsert(DataSet: TDataSet);
     procedure qryCategoriaAfterInsert(DataSet: TDataSet);
     procedure qryProdutoNewRecord(DataSet: TDataSet);
+    procedure ZConnection1BeforeConnect(Sender: TObject);
     procedure ZUpdtOrcamentoAfterInsertSQL(Sender: TObject);
     procedure SomaItens;
   private
@@ -98,6 +100,28 @@ begin
   qryProdutostatus_produto.AsString:= 'ATIVO';
 end;
 
+procedure TDataModule1.ZConnection1BeforeConnect(Sender: TObject);
+var
+  Ini: TIniFile;
+begin
+    Ini := TIniFile.Create( ChangeFileExt( Application.ExeName, '.INI' ) );
+    try
+        ZConnection1.Connected       := False;
+        ZConnection1.HostName        := Ini.ReadString('ZConnection1', 'Hostname', 'ohpatrao.chuot5bcwxis.us-east-1.rds.amazonaws.com');
+        ZConnection1.Port            := Ini.ReadInteger('ZConnection1', 'Port', 5432);
+        ZConnection1.Protocol        := Ini.ReadString('ZConnection1', 'Protocol', 'postgresqla');
+        ZConnection1.User            := Ini.ReadString('ZConnection1', 'User', 'postgres');
+        ZConnection1.Password        := Ini.ReadString('ZConnection1', 'Password', 'aw2000()');
+        ZConnection1.Database        := Ini.ReadString('ZConnection1', 'Database', 'postgres');
+    except on E:Exception do
+         begin
+           ShowMessage('Erro ao se conectar ao banco de dados' + #13 + #13+'Motivo: '+e.Message);
+           exit;
+         end;
+    end;
+end;
+
+
 procedure TDataModule1.ZUpdtOrcamentoAfterInsertSQL(Sender: TObject);
 begin
 
@@ -108,10 +132,17 @@ begin
   qryProdutoprodutoid.AsInteger:= StrToInt(getSequence('produto_produtoid'));
 end;
 
+procedure TDataModule1.DataModuleCreate(Sender: TObject);
+begin
+
+end;
+
 procedure TDataModule1.qryClienteAfterInsert(DataSet: TDataSet);
 begin
   qryClienteclienteid.AsInteger:= StrToInt(getSequence('cliente_clienteid'));
 end;
+
+
 
 procedure TDataModule1.qryOrcamentoAfterInsert(DataSet: TDataSet);
 begin
