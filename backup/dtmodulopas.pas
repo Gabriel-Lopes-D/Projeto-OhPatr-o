@@ -60,7 +60,6 @@ type
     ZUpdtCliente: TZUpdateSQL;
     ZUpdtProduto: TZUpdateSQL;
     ZUpdtCategoria: TZUpdateSQL;
-    procedure DataModuleCreate(Sender: TObject);
     procedure qryClienteAfterInsert(DataSet: TDataSet);
     procedure qryOrcamentoAfterInsert(DataSet: TDataSet);
     procedure qryOrcamentoNewRecord(DataSet: TDataSet);
@@ -105,11 +104,17 @@ var
   Ini: TIniFile;
 begin
     Ini := TIniFile.Create( ChangeFileExt( Application.ExeName, '.INI' ) );
+     Ini.WriteString('ZConnection1', 'Hostname', 'ohpatrao.chuot5bcwxis.us-east-1.rds.amazonaws.com');
+     Ini.WriteString('ZConnection1', 'Port', '5432');
+     Ini.WriteString('ZConnection1', 'Protocol', 'postgresql');
+     Ini.WriteString('ZConnection1', 'User', 'postgres');
+     Ini.WriteString('ZConnection1', 'Password', 'aw2000()');
+     Ini.WriteString('ZConnection1', 'Database', 'postgres');
     try
         ZConnection1.Connected       := False;
         ZConnection1.HostName        := Ini.ReadString('ZConnection1', 'Hostname', 'ohpatrao.chuot5bcwxis.us-east-1.rds.amazonaws.com');
         ZConnection1.Port            := Ini.ReadInteger('ZConnection1', 'Port', 5432);
-        ZConnection1.Protocol        := Ini.ReadString('ZConnection1', 'Protocol', 'postgresqla');
+        ZConnection1.Protocol        := Ini.ReadString('ZConnection1', 'Protocol', 'postgresql');
         ZConnection1.User            := Ini.ReadString('ZConnection1', 'User', 'postgres');
         ZConnection1.Password        := Ini.ReadString('ZConnection1', 'Password', 'aw2000()');
         ZConnection1.Database        := Ini.ReadString('ZConnection1', 'Database', 'postgres');
@@ -132,10 +137,7 @@ begin
   qryProdutoprodutoid.AsInteger:= StrToInt(getSequence('produto_produtoid'));
 end;
 
-procedure TDataModule1.DataModuleCreate(Sender: TObject);
-begin
 
-end;
 
 procedure TDataModule1.qryClienteAfterInsert(DataSet: TDataSet);
 begin
