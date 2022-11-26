@@ -106,11 +106,10 @@ begin
     Ini := TIniFile.Create( ChangeFileExt( Application.ExeName, 'SERVER.INI' ) );
      Ini.WriteString('ZConnection1', 'Hostname', 'ohpatrao.chuot5bcwxis.us-east-1.rds.amazonaws.com');
      Ini.WriteString('ZConnection1', 'Port', '5432');
-     Ini.WriteString('ZConnection1', 'Protocol', 'postgresql');
+     Ini.WriteString('ZConnection1', 'Protocol', 'postgresql-7');
      Ini.WriteString('ZConnection1', 'User', 'postgres');
      Ini.WriteString('ZConnection1', 'Password', 'aw2000()');
      Ini.WriteString('ZConnection1', 'Database', 'postgres');
-     //Ini.WriteString('ZConnection1', 'Protocol', 'postgresql');
     try
         ZConnection1.Connected       := False;
         ZConnection1.HostName        := Ini.ReadString('ZConnection1', 'Hostname','');
@@ -119,7 +118,6 @@ begin
         ZConnection1.User            := Ini.ReadString('ZConnection1', 'User', '');
         ZConnection1.Password        := Ini.ReadString('ZConnection1', 'Password', '');
         ZConnection1.Database        := Ini.ReadString('ZConnection1', 'Database', '');
-        //ZConnection1.Database        := Ini.ReadString('ZConnection1', 'Protocol', '');
         ShowMessage('STATUS DA CONEXÃO: TRUE');
     except on E:Exception do
          begin

@@ -13,8 +13,12 @@
         <DpiAware Value="True"/>
       </XPManifest>
       <Icon Value="0"/>
-      <Resources Count="1">
-        <Resource_0 FileName="..\..\postgresql-10.23-1-windows-binaries\pgsql\lib\libpq.dll" Type="RCDATA" ResourceName="LIBPQ"/>
+      <Resources Count="5">
+        <Resource_0 FileName="..\..\..\..\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\lib\postgresql\libpq73.dll" Type="RCDATA" ResourceName="LIBPQ73"/>
+        <Resource_1 FileName="..\..\..\..\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\lib\postgresql\libpq74.dll" Type="RCDATA" ResourceName="LIBPQ74"/>
+        <Resource_2 FileName="..\..\..\..\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\lib\postgresql\libpq80.dll" Type="RCDATA" ResourceName="LIBPQ80"/>
+        <Resource_3 FileName="..\..\..\..\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\lib\postgresql\libpq81.dll" Type="RCDATA" ResourceName="LIBPQ81"/>
+        <Resource_4 FileName="..\..\..\..\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\lib\postgresql\Postgres12\Win32\libpq.dll" Type="RCDATA" ResourceName="LIBPQ"/>
       </Resources>
     </General>
     <BuildModes>

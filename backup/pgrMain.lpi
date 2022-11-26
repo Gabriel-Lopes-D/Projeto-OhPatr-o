@@ -14,7 +14,7 @@
       </XPManifest>
       <Icon Value="0"/>
       <Resources Count="1">
-        <Resource_0 FileName="C:\Program Files (x86)\PostgreSQL\10\bin\libpq.dll" Type="RCDATA" ResourceName="LIBPQ"/>
+        <Resource_0 FileName="..\..\postgresql-10.23-1-windows-binaries\pgsql\lib\libpq.dll" Type="RCDATA" ResourceName="LIBPQ"/>
       </Resources>
     </General>
     <BuildModes>

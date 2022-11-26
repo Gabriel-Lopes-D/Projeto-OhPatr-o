@@ -54,7 +54,6 @@ type
     qryCliente: TZQuery;
     qryOrcamento: TZQuery;
     qryOrc_itens: TZQuery;
-    ZConnection2: TZConnection;
     ZUpdtOrc_itens: TZUpdateSQL;
     ZUpdtOrcamento: TZUpdateSQL;
     ZUpdtCliente: TZUpdateSQL;
