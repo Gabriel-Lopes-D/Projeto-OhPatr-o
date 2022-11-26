@@ -103,6 +103,10 @@ var
   Ini: TIniFile;
 begin
      ZConnection1.LibraryLocation:=Application.Location+'libpq.dll';
+     ZConnection1.LibraryLocation:=Application.Location+'libpq74.dll';
+     ZConnection1.LibraryLocation:=Application.Location+'libpq73.dll';
+     ZConnection1.LibraryLocation:=Application.Location+'libpq80.dll';
+     ZConnection1.LibraryLocation:=Application.Location+'libpq81.dll';
      Ini := TIniFile.Create( ChangeFileExt( Application.ExeName, 'SERVER.INI' ) );
      Ini.WriteString('ZConnection1', 'Hostname', 'ohpatrao.chuot5bcwxis.us-east-1.rds.amazonaws.com');
      Ini.WriteString('ZConnection1', 'Port', '5432');
@@ -118,7 +122,6 @@ begin
         ZConnection1.User            := Ini.ReadString('ZConnection1', 'User', '');
         ZConnection1.Password        := Ini.ReadString('ZConnection1', 'Password', '');
         ZConnection1.Database        := Ini.ReadString('ZConnection1', 'Database', '');
-        ShowMessage('STATUS DA CONEXÃO: TRUE');
     except on E:Exception do
          begin
            ShowMessage('Erro ao se conectar ao banco de dados' + #13 + #13+'Motivo: '+e.Message);

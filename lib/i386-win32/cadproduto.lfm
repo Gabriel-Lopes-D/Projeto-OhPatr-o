@@ -1,8 +1,9 @@
 inherited cadProdutoF: TcadProdutoF
-  Left = 245
+  Left = 538
   Height = 459
-  Top = 137
+  Top = 177
   Width = 942
+  Align = alClient
   Caption = 'Produtos'
   ClientHeight = 459
   ClientWidth = 942

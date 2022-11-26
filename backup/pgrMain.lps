@@ -33,8 +33,8 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dtModulopas"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="100"/>
-        <CursorPos X="63" Y="105"/>
+        <TopLine Value="115"/>
+        <CursorPos X="37" Y="66"/>
         <UsageCount Value="137"/>
         <Loaded Value="True"/>
       </Unit>
@@ -381,10 +381,18 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory>
+    <JumpHistory HistoryIndex="2">
       <Position>
         <Filename Value="dtmodulopas.pas"/>
         <Caret Line="109" Column="63" TopLine="101"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="111" Column="106" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="63" Column="39" TopLine="47"/>
       </Position>
     </JumpHistory>
     <RunParams>

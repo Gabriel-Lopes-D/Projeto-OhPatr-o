@@ -1,8 +1,9 @@
 inherited cadOrcamentoF: TcadOrcamentoF
-  Left = 678
+  Left = 618
   Height = 539
-  Top = 184
+  Top = 199
   Width = 1211
+  Align = alClient
   Caption = 'Orçamento'
   ClientHeight = 539
   ClientWidth = 1211
@@ -11,6 +12,8 @@ inherited cadOrcamentoF: TcadOrcamentoF
   inherited pcMainCad: TPageControl
     Height = 539
     Width = 1211
+    ActivePage = tsCadastro
+    TabIndex = 1
     OnChange = pcMainCadChange
     inherited tsPesquisa: TTabSheet
       ClientHeight = 511

@@ -1,7 +1,7 @@
 inherited cadOrcamentoF: TcadOrcamentoF
-  Left = 83
+  Left = 678
   Height = 539
-  Top = 104
+  Top = 184
   Width = 1211
   Caption = 'Orçamento'
   ClientHeight = 539
@@ -11,8 +11,6 @@ inherited cadOrcamentoF: TcadOrcamentoF
   inherited pcMainCad: TPageControl
     Height = 539
     Width = 1211
-    ActivePage = tsCadastro
-    TabIndex = 1
     OnChange = pcMainCadChange
     inherited tsPesquisa: TTabSheet
       ClientHeight = 511
@@ -56,18 +54,28 @@ inherited cadOrcamentoF: TcadOrcamentoF
           TabOrder = 3
           Text = 'Id'
         end
-        object MaskEdit1: TMaskEdit[4]
+        object DateTimePicker1: TDateTimePicker[4]
           Left = 85
           Height = 23
           Top = 25
-          Width = 72
-          MaxLength = 10
+          Width = 83
+          CenturyFrom = 1941
+          MaxDate = 2958465
+          MinDate = -53780
           TabOrder = 4
+          TrailingSeparator = False
+          TextForNullDate = 'NULL'
+          LeadingZeros = True
           Visible = False
-          OnKeyDown = KeyDown
-          EditMask = '00/00/0000;1;_'
-          Text = '  /  /    '
-          SpaceChar = '_'
+          Kind = dtkDate
+          TimeFormat = tf24
+          TimeDisplay = tdHMS
+          DateMode = dmComboBox
+          Date = 44884
+          Time = 0.818028321758902
+          UseDefaultSeparators = True
+          HideDateTimeParts = []
+          MonthNames = 'Long'
         end
       end
       object DBGrid1: TDBGrid[1]
