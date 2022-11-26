@@ -36,8 +36,8 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dtModulopas"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="105"/>
-        <CursorPos X="47" Y="128"/>
+        <TopLine Value="111"/>
+        <CursorPos X="9" Y="127"/>
         <UsageCount Value="134"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -399,10 +399,6 @@
     </Units>
     <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="119" Column="13" TopLine="101"/>
-      </Position>
-      <Position>
         <Filename Value="cadcliente.pas"/>
         <Caret Line="226" Column="24" TopLine="205"/>
       </Position>
@@ -517,6 +513,10 @@
       <Position>
         <Filename Value="dtmodulopas.pas"/>
         <Caret Line="127" Column="65" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="128" Column="48" TopLine="105"/>
       </Position>
     </JumpHistory>
     <RunParams>
