@@ -30,7 +30,6 @@ implementation
 
 procedure TRelOrcamentosF.Button1Click(Sender: TObject);
 begin
-  inherited;
   frReport1.LoadFromFile('RelOrcamentosDLL.lrf');
   frReport1.PrepareReport;
   frReport1.ShowReport;

@@ -1,7 +1,7 @@
 object fMain: TfMain
-  Left = 649
+  Left = 247
   Height = 644
-  Top = 138
+  Top = 117
   Width = 985
   Align = alCustom
   Caption = 'ohPatrão'

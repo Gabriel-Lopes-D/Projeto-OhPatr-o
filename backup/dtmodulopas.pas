@@ -119,11 +119,13 @@ begin
         //ZConnection1.Password        := Ini.ReadString('ZConnection1', 'Password', 'aw2000()');
         //ZConnection1.Database        := Ini.ReadString('ZConnection1', 'Database', 'postgres');
         ZConnection1.HostName        := Ini.ReadString('ZConnection1', 'Hostname','');
-        ZConnection1.Port            := Ini.ReadInteger('ZConnection1', 'Port');
+        ZConnection1.Port            := Ini.ReadInteger('ZConnection1', 'Port',5432);
         ZConnection1.Protocol        := Ini.ReadString('ZConnection1', 'Protocol', '');
         ZConnection1.User            := Ini.ReadString('ZConnection1', 'User', '');
         ZConnection1.Password        := Ini.ReadString('ZConnection1', 'Password', '');
         ZConnection1.Database        := Ini.ReadString('ZConnection1', 'Database', '');
+        If ZConnection1.Connect = True then
+          ShowMessage('STATUS DA CONEXÃO: TRUE');
     except on E:Exception do
          begin
            ShowMessage('Erro ao se conectar ao banco de dados' + #13 + #13+'Motivo: '+e.Message);

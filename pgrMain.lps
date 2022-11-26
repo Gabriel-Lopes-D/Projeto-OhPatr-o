@@ -8,10 +8,10 @@
       <Unit>
         <Filename Value="pgrMain.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="7"/>
         <CursorPos X="38" Y="21"/>
-        <UsageCount Value="133"/>
+        <UsageCount Value="134"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -23,8 +23,8 @@
         <UnitName Value="Main"/>
         <EditorIndex Value="1"/>
         <TopLine Value="62"/>
-        <CursorPos X="4" Y="64"/>
-        <UsageCount Value="133"/>
+        <CursorPos X="52" Y="92"/>
+        <UsageCount Value="134"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -36,9 +36,9 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dtModulopas"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="106"/>
-        <CursorPos X="86" Y="122"/>
-        <UsageCount Value="133"/>
+        <TopLine Value="111"/>
+        <CursorPos X="9" Y="127"/>
+        <UsageCount Value="134"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -52,7 +52,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="9"/>
         <CursorPos X="5" Y="26"/>
-        <UsageCount Value="133"/>
+        <UsageCount Value="134"/>
       </Unit>
       <Unit>
         <Filename Value="cadcategoriaprod.pas"/>
@@ -60,10 +60,10 @@
         <ComponentName Value="cadcategoriaProdF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="8"/>
         <TopLine Value="37"/>
         <CursorPos X="3" Y="45"/>
-        <UsageCount Value="133"/>
+        <UsageCount Value="134"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -74,10 +74,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadProduto"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="7"/>
         <TopLine Value="51"/>
         <CursorPos X="3" Y="59"/>
-        <UsageCount Value="129"/>
+        <UsageCount Value="130"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -91,7 +91,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos X="27" Y="5"/>
-        <UsageCount Value="119"/>
+        <UsageCount Value="120"/>
       </Unit>
       <Unit>
         <Filename Value="cadcliente.pas"/>
@@ -100,9 +100,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="cadCliente"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="6"/>
         <CursorPos X="24" Y="226"/>
-        <UsageCount Value="118"/>
+        <UsageCount Value="119"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -112,9 +112,9 @@
         <ComponentName Value="cadOrcamentoF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="4"/>
         <CursorPos X="17" Y="291"/>
-        <UsageCount Value="115"/>
+        <UsageCount Value="116"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -128,7 +128,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="15"/>
         <CursorPos X="31" Y="32"/>
-        <UsageCount Value="112"/>
+        <UsageCount Value="113"/>
       </Unit>
       <Unit>
         <Filename Value="caditemorc.pas"/>
@@ -140,7 +140,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="106"/>
         <CursorPos X="38" Y="120"/>
-        <UsageCount Value="107"/>
+        <UsageCount Value="108"/>
       </Unit>
       <Unit>
         <Filename Value="relprodutospas.pas"/>
@@ -152,7 +152,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="9"/>
         <CursorPos X="20" Y="37"/>
-        <UsageCount Value="101"/>
+        <UsageCount Value="102"/>
       </Unit>
       <Unit>
         <Filename Value="relclientesfpas.pas"/>
@@ -163,7 +163,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="9"/>
         <CursorPos X="59" Y="19"/>
-        <UsageCount Value="99"/>
+        <UsageCount Value="100"/>
       </Unit>
       <Unit>
         <Filename Value="relorcamentosfpas.pas"/>
@@ -172,10 +172,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="RelOrcamentosfpas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="5"/>
-        <CursorPos X="3" Y="23"/>
-        <UsageCount Value="98"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="50" Y="33"/>
+        <UsageCount Value="99"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="login.pas"/>
@@ -183,10 +184,10 @@
         <ComponentName Value="LoginF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="5"/>
         <TopLine Value="54"/>
         <CursorPos X="57" Y="78"/>
-        <UsageCount Value="95"/>
+        <UsageCount Value="96"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -199,7 +200,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
         <CursorPos X="3" Y="27"/>
-        <UsageCount Value="92"/>
+        <UsageCount Value="93"/>
       </Unit>
       <Unit>
         <Filename Value="..\AULA1409SB\EX01\pgrformularios.pas"/>
@@ -387,92 +388,16 @@
         <CursorPos X="20" Y="1504"/>
         <UsageCount Value="10"/>
       </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\components\lazreport\source\lr_class.pas"/>
+        <UnitName Value="LR_Class"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1284"/>
+        <CursorPos X="14" Y="1299"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="109" TopLine="100"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="110" TopLine="100"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="111" TopLine="100"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="112" TopLine="100"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="113" TopLine="100"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="114" TopLine="100"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="115" TopLine="100"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="116" TopLine="100"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="117" TopLine="100"/>
-      </Position>
-      <Position>
-        <Filename Value="orcamento.pas"/>
-        <Caret Line="286" Column="86" TopLine="260"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="112" Column="96" TopLine="100"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="118" Column="10" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="117" Column="24" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="119" Column="12" TopLine="102"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="116" Column="14" TopLine="102"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="118" Column="12" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="117" Column="16" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="119" Column="17" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="118" Column="12" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="108" Column="7" TopLine="101"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="119" Column="13" TopLine="101"/>
-      </Position>
       <Position>
         <Filename Value="cadcliente.pas"/>
         <Caret Line="226" Column="24" TopLine="205"/>
@@ -509,6 +434,90 @@
         <Filename Value="dtmodulopas.pas"/>
         <Caret Line="122" Column="79" TopLine="106"/>
       </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="64" Column="4" TopLine="62"/>
+      </Position>
+      <Position>
+        <Filename Value="main.pas"/>
+        <Caret Line="92" Column="12" TopLine="62"/>
+      </Position>
+      <Position>
+        <Filename Value="relorcamentosfpas.pas"/>
+        <Caret Line="32" Column="32" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="relorcamentosfpas.pas"/>
+        <Caret Line="34" Column="5" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="106" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="107" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="108" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="109" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="110" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="111" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="112" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="113" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="114" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="121" TopLine="93"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="122" TopLine="94"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="123" TopLine="95"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="124" TopLine="96"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="125" TopLine="97"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="126" TopLine="98"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="127" Column="65" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="128" Column="48" TopLine="105"/>
+      </Position>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
@@ -520,4 +529,15 @@
       </List>
     </HistoryLists>
   </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="dtmodulopas.pas"/>
+        <Line Value="106"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
 </CONFIG>

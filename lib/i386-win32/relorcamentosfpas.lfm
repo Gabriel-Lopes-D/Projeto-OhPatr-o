@@ -1,12 +1,11 @@
 inherited RelOrcamentosF: TRelOrcamentosF
+  Left = 992
+  Top = 260
   Caption = 'Imprimir relação de Orçamentos'
   inherited Button1: TButton
     Left = 16
     Width = 296
     Caption = 'Imprimir relação de Orçamentos'
     OnClick = Button1Click
-  end
-  inherited frDBDataSet1: TfrDBDataSet
-    DataSet = DataModule1.qryOrcamento
   end
 end

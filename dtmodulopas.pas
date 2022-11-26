@@ -124,6 +124,7 @@ begin
         ZConnection1.User            := Ini.ReadString('ZConnection1', 'User', '');
         ZConnection1.Password        := Ini.ReadString('ZConnection1', 'Password', '');
         ZConnection1.Database        := Ini.ReadString('ZConnection1', 'Database', '');
+        ShowMessage('STATUS DA CONEXÃO: TRUE');
     except on E:Exception do
          begin
            ShowMessage('Erro ao se conectar ao banco de dados' + #13 + #13+'Motivo: '+e.Message);
