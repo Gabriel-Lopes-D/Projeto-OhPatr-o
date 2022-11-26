@@ -1,31 +1,31 @@
 inherited cadProdutoF: TcadProdutoF
-  Left = 853
-  Height = 307
-  Top = 346
-  Width = 837
+  Left = 538
+  Height = 459
+  Top = 177
+  Width = 942
+  Align = alClient
+  AutoSize = True
   Caption = 'Produtos'
-  ClientHeight = 307
-  ClientWidth = 837
+  ClientHeight = 459
+  ClientWidth = 942
   OnCreate = FormCreate
   OnShow = FormShow
   WindowState = wsNormal
   inherited pcMainCad: TPageControl
-    Height = 307
-    Width = 837
-    ActivePage = tsCadastro
+    Height = 459
+    Width = 942
     Font.CharSet = ANSI_CHARSET
     Font.Height = -12
     Font.Name = 'Arial'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
-    TabIndex = 1
     inherited tsPesquisa: TTabSheet
-      ClientHeight = 279
-      ClientWidth = 829
+      ClientHeight = 431
+      ClientWidth = 934
       inherited Panel1: TPanel
-        Width = 829
-        ClientWidth = 829
+        Width = 934
+        ClientWidth = 934
         inherited edtCampoPesquisa: TEdit
           Left = 136
           OnKeyDown = edtCampoPesquisaKeyDown
@@ -35,7 +35,7 @@ inherited cadProdutoF: TcadProdutoF
           OnClick = btnPesquisaClick
         end
         inherited btnNovo: TBitBtn
-          Left = 701
+          Left = 806
           Height = 44
           Top = 11
           Width = 117
@@ -80,9 +80,9 @@ inherited cadProdutoF: TcadProdutoF
       end
       object DBGrid1: TDBGrid[1]
         Left = 0
-        Height = 163
+        Height = 315
         Top = 66
-        Width = 829
+        Width = 934
         Align = alClient
         Color = clWindow
         Columns = <        
@@ -131,8 +131,8 @@ inherited cadProdutoF: TcadProdutoF
       object Panel3: TPanel[2]
         Left = 0
         Height = 50
-        Top = 229
-        Width = 829
+        Top = 381
+        Width = 934
         Align = alBottom
         Alignment = taRightJustify
         Caption = 'Oh Patrão! '
@@ -147,11 +147,11 @@ inherited cadProdutoF: TcadProdutoF
       end
     end
     inherited tsCadastro: TTabSheet
-      ClientHeight = 279
-      ClientWidth = 829
+      ClientHeight = 431
+      ClientWidth = 934
       inherited Panel2: TPanel
-        Width = 829
-        ClientWidth = 829
+        Width = 934
+        ClientWidth = 934
         inherited btnGravar: TBitBtn
           OnClick = btnGravarClick
         end
@@ -343,8 +343,8 @@ inherited cadProdutoF: TcadProdutoF
       object Panel4: TPanel[17]
         Left = 0
         Height = 50
-        Top = 229
-        Width = 829
+        Top = 381
+        Width = 934
         Align = alBottom
         Alignment = taRightJustify
         Caption = 'Oh Patrão! '

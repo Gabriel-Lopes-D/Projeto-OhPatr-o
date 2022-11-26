@@ -4,23 +4,21 @@ inherited cadProdutoF: TcadProdutoF
   Top = 177
   Width = 942
   Align = alClient
+  AutoSize = True
   Caption = 'Produtos'
   ClientHeight = 459
   ClientWidth = 942
   OnCreate = FormCreate
   OnShow = FormShow
-  WindowState = wsNormal
   inherited pcMainCad: TPageControl
     Height = 459
     Width = 942
-    ActivePage = tsCadastro
     Font.CharSet = ANSI_CHARSET
     Font.Height = -12
     Font.Name = 'Arial'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
-    TabIndex = 1
     inherited tsPesquisa: TTabSheet
       ClientHeight = 431
       ClientWidth = 934

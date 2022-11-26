@@ -1,19 +1,17 @@
 inherited cadOrcamentoF: TcadOrcamentoF
-  Left = 618
+  Left = 720
   Height = 539
-  Top = 199
+  Top = 193
   Width = 1211
   Align = alClient
+  AutoSize = True
   Caption = 'Orçamento'
   ClientHeight = 539
   ClientWidth = 1211
   OnCreate = FormCreate
-  WindowState = wsNormal
   inherited pcMainCad: TPageControl
     Height = 539
     Width = 1211
-    ActivePage = tsCadastro
-    TabIndex = 1
     OnChange = pcMainCadChange
     inherited tsPesquisa: TTabSheet
       ClientHeight = 511

@@ -4,6 +4,7 @@ inherited cadcategoriaProdF: TcadcategoriaProdF
   Top = 206
   Width = 981
   Align = alClient
+  AutoSize = True
   Caption = 'Cadastro Categoria'
   ClientHeight = 452
   ClientWidth = 981
@@ -14,12 +15,10 @@ inherited cadcategoriaProdF: TcadcategoriaProdF
   Font.Quality = fqDraft
   OnCreate = FormCreate
   OnShow = FormShow
-  WindowState = wsNormal
   inherited pcMainCad: TPageControl
     Height = 452
     Width = 981
-    ActivePage = tsCadastro
-    TabIndex = 1
+    AutoSize = True
     inherited tsPesquisa: TTabSheet
       ClientHeight = 424
       ClientWidth = 973

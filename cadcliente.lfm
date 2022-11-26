@@ -1,20 +1,18 @@
 inherited cadClienteF: TcadClienteF
-  Left = 565
+  Left = 695
   Height = 397
-  Top = 156
+  Top = 218
   Width = 944
-  Align = alClient
+  Align = alCustom
+  AutoSize = True
   Caption = 'Cliente'
   ClientHeight = 397
   ClientWidth = 944
   OnCreate = FormCreate
   OnShow = FormShow
-  WindowState = wsNormal
   inherited pcMainCad: TPageControl
     Height = 397
     Width = 944
-    ActivePage = tsCadastro
-    TabIndex = 1
     inherited tsPesquisa: TTabSheet
       ClientHeight = 369
       ClientWidth = 936
