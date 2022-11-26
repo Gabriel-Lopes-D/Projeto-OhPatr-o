@@ -102,7 +102,8 @@ procedure TDataModule1.ZConnection1BeforeConnect(Sender: TObject);
 var
   Ini: TIniFile;
 begin
-    Ini := TIniFile.Create( ChangeFileExt( Application.ExeName, 'SERVER.INI' ) );
+     ZConnection1.LibraryLocation:=Application.Location+'libpq.dll';
+     Ini := TIniFile.Create( ChangeFileExt( Application.ExeName, 'SERVER.INI' ) );
      Ini.WriteString('ZConnection1', 'Hostname', 'ohpatrao.chuot5bcwxis.us-east-1.rds.amazonaws.com');
      Ini.WriteString('ZConnection1', 'Port', '5432');
      Ini.WriteString('ZConnection1', 'Protocol', 'postgresql-7');
@@ -117,7 +118,6 @@ begin
         ZConnection1.User            := Ini.ReadString('ZConnection1', 'User', '');
         ZConnection1.Password        := Ini.ReadString('ZConnection1', 'Password', '');
         ZConnection1.Database        := Ini.ReadString('ZConnection1', 'Database', '');
-        ShowMessage('STATUS DA CONEXÃO: TRUE');
     except on E:Exception do
          begin
            ShowMessage('Erro ao se conectar ao banco de dados' + #13 + #13+'Motivo: '+e.Message);

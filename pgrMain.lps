@@ -11,7 +11,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
         <CursorPos X="38" Y="21"/>
-        <UsageCount Value="136"/>
+        <UsageCount Value="137"/>
       </Unit>
       <Unit>
         <Filename Value="main.pas"/>
@@ -23,7 +23,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="62"/>
         <CursorPos X="52" Y="92"/>
-        <UsageCount Value="136"/>
+        <UsageCount Value="137"/>
       </Unit>
       <Unit>
         <Filename Value="dtmodulopas.pas"/>
@@ -34,8 +34,8 @@
         <UnitName Value="dtModulopas"/>
         <IsVisibleTab Value="True"/>
         <TopLine Value="100"/>
-        <CursorPos X="63" Y="108"/>
-        <UsageCount Value="136"/>
+        <CursorPos X="88" Y="120"/>
+        <UsageCount Value="137"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -48,7 +48,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="9"/>
         <CursorPos X="5" Y="26"/>
-        <UsageCount Value="136"/>
+        <UsageCount Value="137"/>
       </Unit>
       <Unit>
         <Filename Value="cadcategoriaprod.pas"/>
@@ -59,7 +59,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="37"/>
         <CursorPos X="3" Y="45"/>
-        <UsageCount Value="136"/>
+        <UsageCount Value="137"/>
       </Unit>
       <Unit>
         <Filename Value="cadproduto.pas"/>
@@ -71,7 +71,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="51"/>
         <CursorPos X="3" Y="59"/>
-        <UsageCount Value="132"/>
+        <UsageCount Value="133"/>
       </Unit>
       <Unit>
         <Filename Value="pesqcategoria.pas"/>
@@ -83,7 +83,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos X="27" Y="5"/>
-        <UsageCount Value="122"/>
+        <UsageCount Value="123"/>
       </Unit>
       <Unit>
         <Filename Value="cadcliente.pas"/>
@@ -94,7 +94,7 @@
         <UnitName Value="cadCliente"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="24" Y="226"/>
-        <UsageCount Value="121"/>
+        <UsageCount Value="122"/>
       </Unit>
       <Unit>
         <Filename Value="orcamento.pas"/>
@@ -104,7 +104,7 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="17" Y="291"/>
-        <UsageCount Value="118"/>
+        <UsageCount Value="119"/>
       </Unit>
       <Unit>
         <Filename Value="pesqcliente.pas"/>
@@ -116,7 +116,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="15"/>
         <CursorPos X="31" Y="32"/>
-        <UsageCount Value="115"/>
+        <UsageCount Value="116"/>
       </Unit>
       <Unit>
         <Filename Value="caditemorc.pas"/>
@@ -128,7 +128,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="106"/>
         <CursorPos X="38" Y="120"/>
-        <UsageCount Value="110"/>
+        <UsageCount Value="111"/>
       </Unit>
       <Unit>
         <Filename Value="relprodutospas.pas"/>
@@ -140,7 +140,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="9"/>
         <CursorPos X="20" Y="37"/>
-        <UsageCount Value="104"/>
+        <UsageCount Value="105"/>
       </Unit>
       <Unit>
         <Filename Value="relclientesfpas.pas"/>
@@ -151,7 +151,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="9"/>
         <CursorPos X="59" Y="19"/>
-        <UsageCount Value="102"/>
+        <UsageCount Value="103"/>
       </Unit>
       <Unit>
         <Filename Value="relorcamentosfpas.pas"/>
@@ -162,7 +162,7 @@
         <UnitName Value="RelOrcamentosfpas"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="50" Y="33"/>
-        <UsageCount Value="101"/>
+        <UsageCount Value="102"/>
       </Unit>
       <Unit>
         <Filename Value="login.pas"/>
@@ -173,7 +173,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="54"/>
         <CursorPos X="57" Y="78"/>
-        <UsageCount Value="98"/>
+        <UsageCount Value="99"/>
       </Unit>
       <Unit>
         <Filename Value="sobre.pas"/>
@@ -184,7 +184,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
         <CursorPos X="3" Y="27"/>
-        <UsageCount Value="95"/>
+        <UsageCount Value="96"/>
       </Unit>
       <Unit>
         <Filename Value="..\AULA1409SB\EX01\pgrformularios.pas"/>

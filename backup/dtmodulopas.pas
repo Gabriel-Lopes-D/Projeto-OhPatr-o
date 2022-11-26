@@ -54,7 +54,6 @@ type
     qryCliente: TZQuery;
     qryOrcamento: TZQuery;
     qryOrc_itens: TZQuery;
-    ZConnection2: TZConnection;
     ZUpdtOrc_itens: TZUpdateSQL;
     ZUpdtOrcamento: TZUpdateSQL;
     ZUpdtCliente: TZUpdateSQL;
@@ -103,7 +102,8 @@ procedure TDataModule1.ZConnection1BeforeConnect(Sender: TObject);
 var
   Ini: TIniFile;
 begin
-    Ini := TIniFile.Create( ChangeFileExt( Application.ExeName, 'SERVER.INI' ) );
+     ZConnection1.LibraryLocation:=Application.Location+'libpq.dll';
+     Ini := TIniFile.Create( ChangeFileExt( Application.ExeName, 'SERVER.INI' ) );
      Ini.WriteString('ZConnection1', 'Hostname', 'ohpatrao.chuot5bcwxis.us-east-1.rds.amazonaws.com');
      Ini.WriteString('ZConnection1', 'Port', '5432');
      Ini.WriteString('ZConnection1', 'Protocol', 'postgresql-7');
