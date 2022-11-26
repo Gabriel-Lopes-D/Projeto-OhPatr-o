@@ -14,7 +14,6 @@ type
 
   TsobreF = class(TForm)
     BitBtn1: TBitBtn;
-    Image1: TImage;
     Memo1: TMemo;
     Panel1: TPanel;
     procedure BitBtn1Click(Sender: TObject);
