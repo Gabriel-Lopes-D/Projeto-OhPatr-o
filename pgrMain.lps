@@ -36,8 +36,8 @@
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="dtModulopas"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="91"/>
-        <CursorPos X="72" Y="106"/>
+        <TopLine Value="106"/>
+        <CursorPos X="86" Y="122"/>
         <UsageCount Value="133"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -391,18 +391,6 @@
     <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="105" Column="17" TopLine="94"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="107" TopLine="100"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
-        <Caret Line="108" TopLine="100"/>
-      </Position>
-      <Position>
-        <Filename Value="dtmodulopas.pas"/>
         <Caret Line="109" TopLine="100"/>
       </Position>
       <Position>
@@ -508,6 +496,18 @@
       <Position>
         <Filename Value="dtmodulopas.pas"/>
         <Caret Line="96" Column="13" TopLine="90"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="121" Column="82" TopLine="97"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="126" Column="85" TopLine="105"/>
+      </Position>
+      <Position>
+        <Filename Value="dtmodulopas.pas"/>
+        <Caret Line="122" Column="79" TopLine="106"/>
       </Position>
     </JumpHistory>
     <RunParams>
