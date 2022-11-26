@@ -106,18 +106,12 @@ begin
     Ini := TIniFile.Create( ChangeFileExt( Application.ExeName, 'SERVER.INI' ) );
      Ini.WriteString('ZConnection1', 'Hostname', 'ohpatrao.chuot5bcwxis.us-east-1.rds.amazonaws.com');
      Ini.WriteString('ZConnection1', 'Port', '5432');
-     Ini.WriteString('ZConnection1', 'Protocol', 'postgresql');
+     Ini.WriteString('ZConnection1', 'Protocol', 'postgresql-7');
      Ini.WriteString('ZConnection1', 'User', 'postgres');
      Ini.WriteString('ZConnection1', 'Password', 'aw2000()');
      Ini.WriteString('ZConnection1', 'Database', 'postgres');
     try
         ZConnection1.Connected       := False;
-        //ZConnection1.HostName        := Ini.ReadString('ZConnection1', 'Hostname', 'ohpatrao.chuot5bcwxis.us-east-1.rds.amazonaws.com');
-        //ZConnection1.Port            := Ini.ReadInteger('ZConnection1', 'Port', 5432);
-        //ZConnection1.Protocol        := Ini.ReadString('ZConnection1', 'Protocol', 'postgresql');
-        //ZConnection1.User            := Ini.ReadString('ZConnection1', 'User', 'postgres');
-        //ZConnection1.Password        := Ini.ReadString('ZConnection1', 'Password', 'aw2000()');
-        //ZConnection1.Database        := Ini.ReadString('ZConnection1', 'Database', 'postgres');
         ZConnection1.HostName        := Ini.ReadString('ZConnection1', 'Hostname','');
         ZConnection1.Port            := Ini.ReadInteger('ZConnection1', 'Port',5432);
         ZConnection1.Protocol        := Ini.ReadString('ZConnection1', 'Protocol', '');

@@ -256,6 +256,7 @@ object DataModule1: TDataModule1
     BeforeConnect = ZConnection1BeforeConnect
     Port = 5432
     Database = 'postgres'
+    Protocol = 'postgresql-7'
     Left = 80
     Top = 152
   end
