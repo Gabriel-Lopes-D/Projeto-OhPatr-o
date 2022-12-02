@@ -1,7 +1,7 @@
 inherited cadOrcamentoF: TcadOrcamentoF
-  Left = 720
+  Left = 741
   Height = 539
-  Top = 193
+  Top = 196
   Width = 1211
   Align = alClient
   AutoSize = True
@@ -12,6 +12,8 @@ inherited cadOrcamentoF: TcadOrcamentoF
   inherited pcMainCad: TPageControl
     Height = 539
     Width = 1211
+    ActivePage = tsCadastro
+    TabIndex = 1
     OnChange = pcMainCadChange
     inherited tsPesquisa: TTabSheet
       ClientHeight = 511
@@ -25,7 +27,7 @@ inherited cadOrcamentoF: TcadOrcamentoF
           OnKeyDown = KeyDown
         end
         inherited btnPesquisa: TBitBtn
-          Left = 214
+          Left = 216
           OnClick = btnPesquisaClick
         end
         inherited btnNovo: TBitBtn

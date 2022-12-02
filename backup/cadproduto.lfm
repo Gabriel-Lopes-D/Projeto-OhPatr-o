@@ -10,7 +10,6 @@ inherited cadProdutoF: TcadProdutoF
   ClientWidth = 942
   OnCreate = FormCreate
   OnShow = FormShow
-  WindowState = wsNormal
   inherited pcMainCad: TPageControl
     Height = 459
     Width = 942

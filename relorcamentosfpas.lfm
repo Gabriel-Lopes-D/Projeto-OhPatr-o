@@ -1,11 +1,64 @@
 inherited RelOrcamentosF: TRelOrcamentosF
-  Left = 992
-  Top = 260
+  Left = 1075
+  Height = 231
+  Top = 259
+  Width = 357
   Caption = 'Imprimir relação de Orçamentos'
+  ClientHeight = 231
+  ClientWidth = 357
   inherited Button1: TButton
-    Left = 16
+    Top = 80
     Width = 296
     Caption = 'Imprimir relação de Orçamentos'
     OnClick = Button1Click
+  end
+  object DateTimePicker1: TDateTimePicker[1]
+    Left = 24
+    Height = 36
+    Top = 16
+    Width = 129
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 1
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 44896
+    Time = 0.351226423612388
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+  object DateTimePicker2: TDateTimePicker[2]
+    Left = 191
+    Height = 36
+    Top = 16
+    Width = 129
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 2
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 44896
+    Time = 0.351363460649736
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+  end
+  inherited frReport1: TfrReport[3]
+  end
+  inherited frDBDataSet1: TfrDBDataSet[4]
+    DataSet = DataModule1.qryOrcamento
   end
 end

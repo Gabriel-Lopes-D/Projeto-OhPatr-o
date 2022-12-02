@@ -13,12 +13,14 @@ inherited cadProdutoF: TcadProdutoF
   inherited pcMainCad: TPageControl
     Height = 459
     Width = 942
+    ActivePage = tsCadastro
     Font.CharSet = ANSI_CHARSET
     Font.Height = -12
     Font.Name = 'Arial'
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
     ParentFont = False
+    TabIndex = 1
     inherited tsPesquisa: TTabSheet
       ClientHeight = 431
       ClientWidth = 934

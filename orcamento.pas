@@ -79,7 +79,7 @@ var
   AuxWhere: string;
   AuxDate: String;
 begin
-  //Esta procedure irá executar a pesquisa da Categoria
+  //Esta procedure irá executar a pesquisa do orçamento
   if ComboBox1.Text = 'Id'then //Identifica o tipo de pesquisa
     begin
        if edtCampoPesquisa.Text = '' then//verifica se o campo ta vazio
